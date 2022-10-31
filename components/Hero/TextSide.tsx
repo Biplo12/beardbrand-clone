@@ -13,10 +13,14 @@ const TextSide: React.FC<ITextSide> = ({
   buttonText,
 }): JSX.Element => {
   return (
-    <div className="bg-charleston-green w-full min-h-[100vh] flex justify-center items-center flex-col">
-      <div className="flex flex-col justify-center items-start gap-5 px-[50px] mxlg:px-[25px]">
-        <h1 className="font-zurich text-xxxl w-full mxlg:text-xxl">{title}</h1>
-        <p className="max-w-[75%] mxlg:max-w-[90%]">{content}</p>
+    <div className="w-full min-h-[100vh] justify-center items-center flex flex-col mxlg:z-20">
+      <div className="flex flex-col justify-start items-start mxlg:justify-center mxlg:items-center gap-5 px-[50px] mxlg:px-1">
+        <h1 className="font-pano text-xxxl w-full mxlg:text-xxl mxlg:text-center">
+          {title}
+        </h1>
+        <p className="max-w-[75%] mxlg:max-w-[100%] mxlg:text-center">
+          {content}
+        </p>
         <Button buttonColor="white" text={buttonText} />
       </div>
     </div>

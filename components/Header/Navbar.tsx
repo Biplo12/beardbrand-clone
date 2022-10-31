@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 const Navbar: React.FC = (): JSX.Element => {
   return (
-    <div className="w-full bg-alabaster py-[20px] px-[60px] h-[10vh] flex justify-between items-center gap-3 flex-wrap mxsm:justify-center mxsm:px-[10px]">
+    <div className="w-full bg-alabaster py-[20px] px-[60px] h-[10vh] flex justify-between items-center gap-3 flex-wrap mxsm:justify-center mxsm:px-[10px] mxsm:flex-col">
       <img src="/static/assets/sm-logo.png" alt="logo" className="h-[56px]" />
       <ul className="text-charleston-green flex gap-10 justify-center items-center">
         <li className="font-bold">

@@ -16,16 +16,17 @@ module.exports = {
       fontFamily: {
         'space-grotesk': 'Space Grotesk, sans-serif',
         zurich: 'Zurich BdEx L2',
+        pano: 'Pano',
         sans: ['Space Grotesk, sans-serif'],
       },
       fontSize: {
         xsm: '.75rem',
         sm: '.9rem',
         md: '1.1rem',
-        lg: '1.6rem',
-        xl: '1.9rem',
-        xxl: '2.25rem',
-        xxxl: '4rem',
+        lg: '1.45rem',
+        xl: '1.75rem',
+        xxl: '2rem',
+        xxxl: '3.5rem',
       },
       screens: {
         // => @media (min-width: 640px) { ... }

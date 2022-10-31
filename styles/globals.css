@@ -4,3 +4,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Pano';
+  src: local('Pano'), url('/static/fonts/Pano.ttf') format('truetype');
+  font-weight: bold;
+}

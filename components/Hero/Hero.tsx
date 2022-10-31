@@ -3,13 +3,19 @@ import ImageSide from './ImageSide';
 import TextSide from './TextSide';
 const Hero: React.FC = (): JSX.Element => {
   const [imageSize, setImageSize] = useState(false);
+  const [slider, setSlider] = useState(false);
 
   useEffect(() => {
     const handleImageSize = () => {
-      if (window.scrollY >= 120) {
+      if (window.scrollY >= 120 && window.scrollY <= 2000) {
         setImageSize(true);
       } else {
         setImageSize(false);
+      }
+      if (window.scrollY <= 2000) {
+        setSlider(true);
+      } else {
+        setSlider(false);
       }
     };
 
@@ -18,8 +24,8 @@ const Hero: React.FC = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="flex justify-between items-center w-full h-[86vh]">
-      <div className="flex flex-col w-[50%] h-full">
+    <div className="flex justify-between items-center w-full h-[300vh] bg-charleston-green mxlg:bg-transparent mxlg:justify-center">
+      <div className="flex flex-col w-[50%] h-full mxlg:w-full">
         <TextSide
           title="NEW NAME, NEW LOOK; SAME OIL."
           content="Our legendary lightweight, non-greasy beard oil has a new name and a
@@ -39,11 +45,15 @@ const Hero: React.FC = (): JSX.Element => {
         />
       </div>
       <div
-        className={`flex flex-col ease duration-100 w-[50%] h-full ${
-          imageSize ? 'fixed right-0 top-0' : 'static'
+        className={`flex flex-col w-[50%] right-0 h-full mxlg:w-auto ${
+          imageSize ? 'fixed mxlg:left-0' : 'static'
+        } ${
+          slider
+            ? 'bottom-0 justify-start items-start'
+            : 'top-0 justify-end items-end'
         }`}
       >
-        <ImageSide imageSize={imageSize} />
+        <ImageSide imageSize={imageSize} slider={slider} />
       </div>
     </div>
   );
