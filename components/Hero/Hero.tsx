@@ -3,7 +3,7 @@ import ImageSide from './ImageSide';
 import TextSide from './TextSide';
 const Hero: React.FC = (): JSX.Element => {
   const [imageSize, setImageSize] = useState(false);
-  const [slider, setSlider] = useState(false);
+  const [slider, setSlider] = useState(true);
 
   useEffect(() => {
     const handleImageSize = () => {
