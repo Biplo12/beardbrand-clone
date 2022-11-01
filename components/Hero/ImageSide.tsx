@@ -33,7 +33,7 @@ const ImageSide: React.FC<IImageSide> = ({
         <img
           src={`./static/assets/hero-${currentImage}.png`}
           alt="hero oil"
-          className={`object-cover h-[100vh]`}
+          className={`object-cover h-[100vh] mxlg:brightness-50`}
         />
       </div>
     </div>

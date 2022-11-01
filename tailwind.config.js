@@ -29,6 +29,8 @@ module.exports = {
         xxxl: '3.5rem',
       },
       screens: {
+        // => @media (min-width: 480px) { ... }
+        mxxsm: { max: '480px' },
         // => @media (min-width: 640px) { ... }
         mxsm: { max: '640px' },
         // => @media (min-width: 768px) { ... }

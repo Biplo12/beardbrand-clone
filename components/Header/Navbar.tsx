@@ -23,14 +23,14 @@ const Navbar: React.FC = (): JSX.Element => {
           alt="logo"
           className="h-[56px] px-3"
         />
-        <ul className="text-charleston-green flex gap-10 justify-center items-center">
-          <li className="font-bold mxsm:hidden">
+        <ul className="text-charleston-green flex gap-8 justify-center items-center">
+          <li className="font-bold mxsm:hidden ease duration-200 link link-underline link-underline-black hover:text-black ">
             <Link href="shop">SHOP</Link>
           </li>
-          <li className="font-bold mxsm:hidden">
+          <li className="font-bold mxsm:hidden ease duration-200 link link-underline link-underline-black hover:text-black ">
             <Link href="shop">LEARN</Link>
           </li>
-          <li className="mxsm:hidden">
+          <li className="mxsm:hidden ease duration-200 link link-underline link-underline-black hover:text-black ">
             <Link href="shop">Login</Link>
           </li>
           <li>

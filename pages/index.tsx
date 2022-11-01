@@ -3,6 +3,7 @@ import Header from '@components/Header/Header';
 import Hero from '@components/Hero/Hero';
 import InfoCard from '@components/InfoCard';
 import Head from 'next/head';
+import BundleAd from '@components/BundleAd/BundleAd';
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Header />
       <Hero />
       <InfoCard />
+      <BundleAd />
     </div>
   );
 };
