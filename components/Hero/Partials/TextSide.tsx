@@ -1,4 +1,4 @@
-import Button from '@common/Button';
+import Button from '@components/Common/Button';
 import React from 'react';
 
 interface ITextSide {

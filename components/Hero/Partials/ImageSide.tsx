@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-interface IImageSide {
-  imageSize: boolean;
-  slider: boolean;
-}
-
-const ImageSide: React.FC<IImageSide> = ({
-  imageSize,
-  slider,
-}): JSX.Element => {
+const ImageSide: React.FC = (): JSX.Element => {
   const [currentImage, setCurrentImage] = useState(1);
   useEffect(() => {
     const handleImageSize = () => {

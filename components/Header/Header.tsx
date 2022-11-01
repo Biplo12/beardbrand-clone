@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import TopBar from './TopBar';
+import Navbar from './Partials/Navbar';
+import TopBar from './Partials/TopBar';
 const Header: React.FC = (): JSX.Element => {
   return (
     <div className="w-full">

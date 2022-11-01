@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ImageSide from './ImageSide';
-import TextSide from './TextSide';
+import ImageSide from './Partials/ImageSide';
+import TextSide from './Partials/TextSide';
 const Hero: React.FC = (): JSX.Element => {
   const [imageSize, setImageSize] = useState(false);
   const [slider, setSlider] = useState(true);
@@ -53,7 +53,7 @@ const Hero: React.FC = (): JSX.Element => {
             : 'top-0 justify-end items-end'
         }`}
       >
-        <ImageSide imageSize={imageSize} slider={slider} />
+        <ImageSide />
       </div>
     </div>
   );
