@@ -40,7 +40,10 @@ const Navbar: React.FC = (): JSX.Element => {
               className="min-h-[15px] h-[20px]"
             />
           </li>
-          <li>
+          <li className="relative">
+            <span className="text-xsm absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-35%]">
+              0
+            </span>
             <img
               src="/static/svgs/cart-icon.svg"
               alt="Cart icon"
