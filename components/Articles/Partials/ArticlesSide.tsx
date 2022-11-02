@@ -2,7 +2,7 @@ import React from 'react';
 import Article from './Article';
 const ArticlesSide: React.FC = (): JSX.Element => {
   return (
-    <div className="h-full min-h-[300vh] w-[50%] bg-white">
+    <div className="h-full min-h-[200vh] w-[50%] bg-white mxlg:w-full">
       <Article
         articleData="Oct 14, 2022"
         articleTitle="7 BEST WAYS TO WEAR COWBOY BOOTS"
