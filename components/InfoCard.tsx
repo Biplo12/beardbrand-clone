@@ -2,8 +2,10 @@ import React from 'react';
 const InfoCard: React.FC = (): JSX.Element => {
   return (
     <div className="w-full bg-dark-vanilla text-charleston-green flex justify-center items-center flex-col py-[50px] px-[75px] min-h-[70vh] h-auto">
-      <div className="flex flex-col justify-start">
-        <h1 className="text-xxxl font-pano mxsm:text-xxl">KEEP ON GROWING</h1>
+      <div className="flex flex-col justify-start ">
+        <h1 className="text-3xl font-pano mxsm:text-2xl mb-6">
+          KEEP ON GROWING
+        </h1>
         <div className="flex flex-col gap-6">
           <p className="w-full">
             Some time ago, your life was very different than it is today. It was

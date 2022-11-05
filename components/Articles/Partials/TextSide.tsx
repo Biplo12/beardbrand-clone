@@ -8,11 +8,15 @@ const TextSide: React.FC = (): JSX.Element => {
   });
   return (
     <div
-      className={`flex flex-col justify-start items-start w-[50%] min-h-full bg-white px-[75px] py-[40px] mxlg:w-full mxlg:static`}
+      className={`flex flex-col justify-start items-start w-[50%] min-h-full bg-white px-[65px] py-[40px] mxlg:w-full mxlg:justify-center mxlg:items-center mxlg:py-[75px]`}
     >
-      <div className={`mt-[30%] ${inView ? 'sticky top-[40%] left-0' : ''}`}>
+      <div
+        className={`mt-[30%] mxlg:flex mxlg:flex-col mxlg:justify-center mxlg:items-center mxlg:mt-0 mxlg:py-[40px] ${
+          inView ? 'sticky top-[40%] left-0' : ''
+        }`}
+      >
         <h1
-          className={`text-charleston-green font-bold font-pano text-xxxl`}
+          className={`text-charleston-green font-bold font-pano text-3xl mxlg:text-2xl mxlg:text-center mb-6`}
           ref={ref}
         >
           THE GREATEST GROOMING BLOG ON EARTH

@@ -3,7 +3,7 @@ const TextSide: React.FC = (): JSX.Element => {
   return (
     <div className="bg-charleston-green w-[50%] flex justify-center flex-col py-[40px] px-[75px] h-auto mxlg:w-full mxlg:px-[25px]">
       <div className="flex justify-start items-start w-full">
-        <h1 className="font-pano text-lg text-left mb-6 ">
+        <h1 className="font-pano text-xl text-left mb-6 ">
           BUILD A CUSTOM KIT
         </h1>
       </div>

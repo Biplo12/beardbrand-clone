@@ -25,19 +25,20 @@ module.exports = {
         md: '1.1rem',
         lg: '1.45rem',
         xl: '1.75rem',
-        xxl: '2rem',
-        xxxl: '3.5rem',
+        '2xl': '2rem',
+        '3xl': '3rem',
+        '4xl': '3.5rem',
       },
       screens: {
-        // => @media (min-width: 480px) { ... }
+        // => @media (max-width: 480px) { ... }
         mxxsm: { max: '480px' },
-        // => @media (min-width: 640px) { ... }
+        // => @media (max-width: 640px) { ... }
         mxsm: { max: '640px' },
-        // => @media (min-width: 768px) { ... }
+        // => @media (max-width: 768px) { ... }
         mxmd: { max: '768px' },
-        // => @media (min-width: 1024px) { ... }
+        // => @media (max-width: 1024px) { ... }
         mxlg: { max: '1024px' },
-        // => @media (min-width: 1280px) { ... }
+        // => @media (max-width: 1280px) { ... }
         mxxl: { max: '1280px' },
       },
     },
