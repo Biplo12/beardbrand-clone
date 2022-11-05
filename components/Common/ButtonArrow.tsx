@@ -5,7 +5,7 @@ interface IBUTTON {
   text: string;
 }
 
-const Button: React.FC<IBUTTON> = ({ buttonColor, text }): JSX.Element => {
+const ButtonArrow: React.FC<IBUTTON> = ({ buttonColor, text }): JSX.Element => {
   const [hovered, setHovered] = useState(false);
   return (
     <>
@@ -34,4 +34,4 @@ const Button: React.FC<IBUTTON> = ({ buttonColor, text }): JSX.Element => {
     </>
   );
 };
-export default Button;
+export default ButtonArrow;

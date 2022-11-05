@@ -1,4 +1,4 @@
-import Button from '@components/Common/Button';
+import ButtonArrow from '@components/Common/ButtonArrow';
 import React from 'react';
 
 interface ITextSide {
@@ -21,7 +21,7 @@ const TextSide: React.FC<ITextSide> = ({
         <p className="max-w-[75%] mxlg:max-w-[100%] mxlg:text-center">
           {content}
         </p>
-        <Button buttonColor="white" text={buttonText} />
+        <ButtonArrow buttonColor="white" text={buttonText} />
       </div>
     </div>
   );

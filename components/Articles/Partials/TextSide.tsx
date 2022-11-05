@@ -1,5 +1,5 @@
 import React from 'react';
-// import Button from '../../Common/Button';
+import ButtonArrow from '@common/ButtonArrow';
 import { useInView } from 'react-intersection-observer';
 
 const TextSide: React.FC = (): JSX.Element => {
@@ -17,7 +17,7 @@ const TextSide: React.FC = (): JSX.Element => {
         >
           THE GREATEST GROOMING BLOG ON EARTH
         </h1>
-        {/* <Button buttonColor="black" text="READ NOW" /> */}
+        <ButtonArrow buttonColor="black" text="READ NOW" />
       </div>
     </div>
   );
