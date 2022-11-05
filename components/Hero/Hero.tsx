@@ -1,7 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import ImageSide from './Partials/ImageSide';
-import ResponsiveSlider from './Partials/ResponsiveSlider';
 import TextSide from './Partials/TextSide';
 const Hero: React.FC = (): JSX.Element => {
   const [ref, inView] = useInView({
