@@ -3,10 +3,9 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const TextSide: React.FC = (): JSX.Element => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 1,
   });
-  console.log(inView);
   return (
     <div
       className={`flex flex-col justify-start items-start w-[50%] min-h-full bg-white px-[75px] py-[40px] mxlg:w-full mxlg:static`}
