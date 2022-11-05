@@ -15,7 +15,7 @@ const Hero: React.FC = (): JSX.Element => {
   });
 
   return (
-    <div className="flex justify-between items-center flex-col w-full h-[300vh] bg-charleston-green mxlg:bg-transparent mxlg:justify-center ">
+    <div className="flex justify-between items-center w-full h-[300vh] bg-charleston-green mxlg:bg-transparent mxlg:justify-center ">
       <div className="flex flex-col w-[50%] h-full mxlg:w-full mxlg:absolute top-0 ">
         <div ref={ref}>
           <TextSide
@@ -44,7 +44,6 @@ const Hero: React.FC = (): JSX.Element => {
       <div className={`flex flex-col w-[50%] right-0 h-full mxlg:w-auto`}>
         <ImageSide inView={inView} inView1={inView1} inView2={inView2} />
       </div>
-      <ResponsiveSlider />
     </div>
   );
 };
