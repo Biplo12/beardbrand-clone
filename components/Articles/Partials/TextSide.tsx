@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../Common/Button';
+// import Button from '../../Common/Button';
 import { useInView } from 'react-intersection-observer';
 
 const TextSide: React.FC = (): JSX.Element => {
