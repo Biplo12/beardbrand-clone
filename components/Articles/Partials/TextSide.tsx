@@ -1,4 +1,4 @@
-import Button from '@common/Button';
+import Button from '../../Common/Button';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
