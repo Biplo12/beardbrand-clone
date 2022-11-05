@@ -1,9 +1,7 @@
-import useScrollDirection from '@hooks/useScrollDirection';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 const Navbar: React.FC = (): JSX.Element => {
   const [menu, setMenu] = useState(false);
-  const scrollDirection = useScrollDirection();
   const handleMenu = () => setMenu(!menu);
 
   useEffect(() => {
@@ -20,9 +18,7 @@ const Navbar: React.FC = (): JSX.Element => {
   return (
     <>
       <div
-        className={`w-full bg-alabaster py-[20px] px-[60px] h-auto top-0 left-0 flex fixed justify-between items-center gap-3 ease duration-500 z-30 flex-wrap mxsm:justify-center ${
-          scrollDirection === 'down' ? '-top-24' : 'top-0 '
-        }`}
+        className={`w-full bg-alabaster py-[20px] px-[60px] h-auto top-0 left-0 flex justify-between items-center gap-3 ease duration-500 z-30 flex-wrap mxsm:justify-center`}
       >
         <img
           src="/static/assets/sm-logo.png"
