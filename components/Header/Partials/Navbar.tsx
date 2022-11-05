@@ -15,7 +15,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     window.addEventListener('resize', handleCloseMenu, true);
     return () => window.removeEventListener('resize', handleCloseMenu);
-  }, []);
+  }, [menu]);
 
   return (
     <>
