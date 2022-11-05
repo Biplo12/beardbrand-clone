@@ -17,7 +17,7 @@ const TextSide: React.FC = (): JSX.Element => {
         >
           THE GREATEST GROOMING BLOG ON EARTH
         </h1>
-        <Button buttonColor="black" text="READ NOW" />
+        {/* <Button buttonColor="black" text="READ NOW" /> */}
       </div>
     </div>
   );
