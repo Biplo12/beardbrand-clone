@@ -1,4 +1,4 @@
-import useScrollDirection from '@components/Hooks/useScrollDirection';
+import useScrollDirection from '@hooks/useScrollDirection';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 const Navbar: React.FC = (): JSX.Element => {

@@ -1,26 +1,35 @@
 import React, { useEffect, useState } from 'react';
+interface IImageSide {
+  inView: boolean;
+  inView1: boolean;
+  inView2: boolean;
+}
 
-const ImageSide: React.FC = (): JSX.Element => {
+const ImageSide: React.FC<IImageSide> = ({
+  inView,
+  inView1,
+  inView2,
+}): JSX.Element => {
   const [currentImage, setCurrentImage] = useState(1);
+  const [sticky, setSticky] = useState(false);
   useEffect(() => {
-    const handleImageSize = () => {
-      if (window.scrollY <= 900) {
-        setCurrentImage(1);
-      }
-      if (window.scrollY > 900 && window.scrollY < 1700) {
-        setCurrentImage(2);
-      }
-      if (window.scrollY >= 1700) {
-        setCurrentImage(3);
-      }
-    };
-
-    window.addEventListener('scroll', handleImageSize, true);
-    return () => window.removeEventListener('scroll', handleImageSize);
-  }, []);
-
+    if (inView) {
+      setCurrentImage(1);
+      setSticky(true);
+    } else if (inView1 && !inView2) {
+      setCurrentImage(2);
+      setSticky(true);
+    } else if (inView1 && inView2) {
+      setCurrentImage(3);
+      setSticky(true);
+    }
+  }, [inView, inView1, inView2]);
   return (
-    <div className="w-full flex justify-end items-center mxlg:absolute mxlg:z-1 mxlg:left-0">
+    <div
+      className={`w-full flex justify-end items-center ${
+        sticky ? 'sticky right-0 top-0' : ''
+      }`}
+    >
       <div>
         <img
           src={`./static/assets/hero-${currentImage}.png`}
