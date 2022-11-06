@@ -6,12 +6,13 @@ import InfoCard from '@components/InfoCard';
 import Head from 'next/head';
 import BundleAd from '@components/BundleAd/BundleAd';
 import Articles from '@components/Articles/Articles';
+import Products from '../components/Products/Products';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Beard Products | Beardbrand DEV </title>
+        <title>Beard Products | Beardbrand </title>
         <link
           rel="shortcut icon"
           href="/static/assets/icon.png"
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <Hero />
         <InfoCard />
         <BundleAd />
+        <Products />
         <Articles />
       </div>
     </>
