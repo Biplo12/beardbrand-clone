@@ -8,6 +8,8 @@ import BundleAd from '@components/BundleAd/BundleAd';
 import Articles from '@components/Articles/Articles';
 import Products from '../components/Products/Products';
 import Newsletter from '@components/Newsletter';
+import Footer from '@components/Footer';
+import BottomBar from '@components/BottomBar';
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +30,11 @@ const Home: NextPage = () => {
         <Products />
         <Articles />
         <Newsletter />
+        <div className="flex flex-col gap-3 w-full">
+          <Footer />
+          <div className="w-[90%] border-t-[1px] border-alabaster border-opacity-[30%] mx-auto" />
+          <BottomBar />
+        </div>
       </div>
     </>
   );

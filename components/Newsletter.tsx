@@ -15,7 +15,7 @@ const Newsletter: React.FC = (): JSX.Element => {
           className="w-full max-w-[800px] border-[1px] border-charleston-green bg-transparent border-opacity-[20%] p-3 outline-none ease duration-150 focus:border-opacity-100"
         />
         <button className="bg-charleston-green text-white h-full px-5 font-bold text-xsm mxxsm:w-full py-4">
-          SUBSCRIBE
+          <p className="ease duration-150 hover:scale-105">SUBSCRIBE</p>
         </button>
       </div>
     </div>
