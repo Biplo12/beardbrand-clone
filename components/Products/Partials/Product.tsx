@@ -5,6 +5,7 @@ interface IProduct {
   imageHovered: string;
   name: string;
   price: number;
+  review: number;
 }
 
 const Product: React.FC<IProduct> = ({
@@ -12,6 +13,7 @@ const Product: React.FC<IProduct> = ({
   imageHovered,
   name,
   price,
+  review,
 }): JSX.Element => {
   const [hovered, setHovered] = useState(false);
   return (
@@ -20,13 +22,23 @@ const Product: React.FC<IProduct> = ({
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      <img
-        src={!hovered ? image : imageHovered}
-        alt="product"
-        className={`max-h-[360px] ease-in duration-[.3s] object-cover ${
-          hovered ? 'scale-105 ' : ''
-        }`}
-      />
+      <div className="relative">
+        <img
+          src={!hovered ? image : imageHovered}
+          alt="product"
+          className={`max-h-[360px] ease-in duration-[.3s] object-cover ${
+            hovered ? 'scale-105 ' : ''
+          }`}
+        />
+        <div className="flex">
+          <div className="flex gap-1 bg-max-green-yellow py-2 px-3 border-[1px] border-charleston-green border-opacity-10 absolute top-3 left-3">
+            <p className="text-xsm">{review}</p>
+            <p className="text-xsm">/</p>
+            <p className="text-xsm">5</p>
+            <img src="/static/svgs/star-icon.svg" alt="star icon" />
+          </div>
+        </div>
+      </div>
       <div>
         <h3 className={`font-bold ease duration-200`}>{name}</h3>
         <div className="flex justify-between items-center">
