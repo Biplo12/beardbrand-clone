@@ -18,7 +18,7 @@ const Product: React.FC<IProduct> = ({
   const [hovered, setHovered] = useState(false);
   return (
     <div
-      className="flex flex-col gap-5 pb-3 overflow-hidden cursor-pointer link link-underline link-underline-black"
+      className="flex flex-col gap-5 pb-3 overflow-hidden cursor-pointer border-2 border-charleston-green border-opacity-5 px-8 py-5"
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >

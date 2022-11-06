@@ -7,6 +7,7 @@ import Head from 'next/head';
 import BundleAd from '@components/BundleAd/BundleAd';
 import Articles from '@components/Articles/Articles';
 import Products from '../components/Products/Products';
+import Newsletter from '@components/Newsletter';
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <BundleAd />
         <Products />
         <Articles />
+        <Newsletter />
       </div>
     </>
   );
