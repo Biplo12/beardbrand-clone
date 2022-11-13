@@ -19,7 +19,10 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@common/*": ["components/Common/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@state/*": ["state/*"],
+      "@store/*": ["store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
