@@ -13,9 +13,7 @@ const TopBar: React.FC = (): JSX.Element => {
         Bundle 3 products + get 1 mote free
       </span>
       <span>|</span>
-      <p className="link link-underline link-underline-white cursor-pointer">
-        Learn more
-      </p>
+      <p className="fancy-link white cursor-pointer">Learn more</p>
     </div>
   );
 };

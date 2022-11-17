@@ -15,6 +15,7 @@ import { selectUser } from '@state/user/userSlice';
 
 const Home: NextPage = () => {
   const user = useAppSelector(selectUser);
+
   return (
     <>
       <Head>

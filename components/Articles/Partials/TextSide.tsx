@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ButtonArrow from '@common/ButtonArrow';
 import { useInView } from 'react-intersection-observer';
 
 const TextSide: React.FC = (): JSX.Element => {
-  const [textPosition, setTextPosition] = useState(false);
   const { ref, inView } = useInView({
     threshold: 1,
   });
@@ -14,7 +13,7 @@ const TextSide: React.FC = (): JSX.Element => {
     >
       <div
         className={`mt-[30%] mxlg:flex mxlg:flex-col mxlg:justify-center mxlg:items-center mxlg:mt-0 mxlg:py-[40px] ${
-          inView ? `sticky top-[40%] left-0` : ''
+          inView ? `sticky top-[350px] left-0` : 'sticky top-[350px] left-0'
         }`}
       >
         <h1

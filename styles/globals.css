@@ -11,30 +11,36 @@
   font-weight: bold;
 }
 
-.link-underline {
-  border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#fff, #fff);
-  background-size: 0 1px;
-  background-position: 0 100%;
+.fancy-link {
+  text-decoration: none;
+  background-image: linear-gradient(black, black);
   background-repeat: no-repeat;
-  transition: background-size 0.2s ease-in-out;
+  background-position: bottom left;
+  background-size: 0% 1px;
+  transition: background-size 300ms ease-in-out;
+}
+.vanilla {
+  text-decoration: none;
+  background-image: linear-gradient(#dccaa8, #dccaa8);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 1px;
+  transition: background-size 300ms ease-in-out;
+}
+.white {
+  text-decoration: none;
+  background-image: linear-gradient(#dccaa8, #dccaa8);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 1px;
+  transition: background-size 300ms ease-in-out;
 }
 
-.link-underline-black {
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#000, #000);
-}
-.link-underline-white {
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#fff, #fff);
-}
-.link-underline-vanilla {
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#dccaa8, #dccaa8);
-}
-
-.link-underline:hover {
+.fancy-link:hover {
   background-size: 100% 1px;
-  background-position: 0 100%;
+  color: inherit;
+}
+
+.brightness {
+  background-color: #3d3c38;
 }

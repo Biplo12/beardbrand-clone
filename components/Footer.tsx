@@ -17,67 +17,101 @@ const Footer: React.FC = (): JSX.Element => {
       </div>
       <div className="py-5">
         <h1 className="font-pano font-bold text-sm">ABOUT BEARDBRAND</h1>
-        <ul>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Beardbrand Barbershop</Link>
+        <ul className="flex flex-col items-left">
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Beardbrand Barbershop
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">About Us</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              About Us
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Ingredient Glossary</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Ingredient Glossary
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Team</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Team
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Retail Locations</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Retail Locations
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Legal</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Legal
+            </Link>
           </li>
         </ul>
       </div>
       <div className="py-5">
         <h1 className="font-pano font-bold text-sm">COMMUNITY SUPPORT</h1>
-        <ul>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Returns & Exchanges</Link>
+        <ul className="flex flex-col items-left">
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Returns & Exchanges
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">FAQs</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              FAQs
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Contact Us</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Contact Us
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Alliance Forums</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Alliance Forums
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Affiliate Program</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Affiliate Program
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">Urban Beardsman Blog</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              Urban Beardsman Blog
+            </Link>
           </li>
         </ul>
       </div>
       <div className="py-5">
         <h1 className="font-pano font-bold text-sm">TOP BLOG ARTICLES</h1>
-        <ul>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">The 22 Best Beard Styles for 2022</Link>
+        <ul className="flex flex-col items-left">
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              The 22 Best Beard Styles for 2022
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">The Definitive Guide to Mustache Styles</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              The Definitive Guide to Mustache Styles
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">How to Grow an Awesome Beard</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              How to Grow an Awesome Beard
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">How to Fix Your Patchy Beard</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              How to Fix Your Patchy Beard
+            </Link>
           </li>
-          <li className="ease duration-200 link link-underline link-underline-vanilla text-sm">
-            <Link href="shop">The Ultimate Guide to Men`s Hair Products</Link>
+          <li className="ease duration-200 text-sm">
+            <Link href="shop" className="fancy-link vanilla">
+              The Ultimate Guide to Men`s Hair Products
+            </Link>
           </li>
         </ul>
       </div>

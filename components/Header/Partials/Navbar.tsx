@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import ReactDOM from 'react-dom';
-
 import React, { useEffect, useState } from 'react';
 import { setMenuStatus } from 'state/user/userSlice';
 import { useAppDispatch } from 'store/store-hooks';
@@ -10,6 +8,7 @@ const Navbar: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const handleMenu = () => {
     setMenu(!menu);
     dispatch(setMenuStatus(!menu));
@@ -42,32 +41,33 @@ const Navbar: React.FC = (): JSX.Element => {
     <>
       <div
         className={`${
-          menu || search ? 'brightness-[25%]' : ''
+          menu || search ? 'brightness' : ''
         } w-full bg-alabaster py-[20px] px-[60px] h-auto top-0 left-0 flex justify-between items-center gap-3 ease duration-500 z-30 flex-wrap mxsm:justify-center`}
       >
         <img
-          src="/static/assets/sm-logo.png"
+          src="/static/assets/sm-logo.svg"
           alt="logo"
-          className="h-[56px] px-3"
+          className={`${
+            menu || search ? 'brightness-image' : ''
+          } h-[56px] px-3`}
         />
         <ul className="text-charleston-green flex gap-8 justify-center items-center">
-          <li className="font-bold mxsm:hidden ease duration-200 link link-underline link-underline-black hover:text-black ">
+          <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black">
             <Link href="shop">SHOP</Link>
           </li>
-          <li className="font-bold mxsm:hidden ease duration-200 link link-underline link-underline-black hover:text-black ">
+          <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black ">
             <Link href="shop">LEARN</Link>
           </li>
-          <li className="mxsm:hidden ease duration-200 link link-underline link-underline-black hover:text-black ">
+          <li className="mxsm:hidden ease duration-200 fancy-link hover:text-black ">
             <Link href="shop">Login</Link>
           </li>
           <li>
-            <button onClick={handleSearch}>
-              <img
-                src="/static/svgs/search-icon.svg"
-                alt="Search icon"
-                className="min-h-[15px] h-[20px]"
-              />
-            </button>
+            <Search
+              search={search}
+              handleSearch={handleSearch}
+              isVisible={isVisible}
+              setIsVisible={setIsVisible}
+            />
           </li>
           <li className="relative">
             <span className="text-xsm absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-35%]">
@@ -124,13 +124,6 @@ const Navbar: React.FC = (): JSX.Element => {
             <p className="text-xsm">© 2022 Beardbrand</p>
           </div>
         </div>
-      </div>
-      <div
-        className={`ease duration-500 ${
-          search ? 'right-0 z-30' : 'right-[-1800px]'
-        }`}
-      >
-        <Search search={search} handleSearch={handleSearch} />
       </div>
     </>
   );
