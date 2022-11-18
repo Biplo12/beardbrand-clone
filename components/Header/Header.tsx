@@ -17,6 +17,20 @@ const Header: React.FC = (): JSX.Element => {
     window.addEventListener('scroll', handleHideNavbar, true);
     return () => window.removeEventListener('scroll', handleHideNavbar);
   }, []);
+  const [navbar, setNavbar] = useState(true);
+  const scrollDirection = useScrollDirection();
+  useEffect(() => {
+    const handleHideNavbar = () => {
+      if (window.scrollY >= 200) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleHideNavbar, true);
+    return () => window.removeEventListener('scroll', handleHideNavbar);
+  }, []);
   return (
     <div
       className={`w-full z-50 ease duration-[.4s] fixed border-b-[1px] border-charleston-green border-opacity-10 ${
