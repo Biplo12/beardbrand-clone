@@ -24,7 +24,7 @@ const PasswordReset: React.FC<IPasswordReset> = ({
           <p className="ease duration-150 hover:scale-105 text-xsm">SUBMIT</p>
         </button>
         <button
-          className="bg-white border-2 border-charleston-green text-charleston-green text-white h-full px-9 font-bold text-xsm py-4 w-full"
+          className="bg-white border-2 border-charleston-green text-charleston-green h-full px-9 font-bold text-xsm py-4 w-full"
           onClick={() => setChangeToReset(false)}
         >
           <p className="ease duration-150 hover:scale-105 text-xsm">CANCEL</p>
