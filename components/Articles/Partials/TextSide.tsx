@@ -6,13 +6,14 @@ const TextSide: React.FC = (): JSX.Element => {
   const { ref, inView } = useInView({
     threshold: 1,
   });
+
   return (
     <div
-      className={`flex flex-col justify-start items-start w-[50%] min-h-full bg-white px-[65px] py-[40px] mxlg:w-full mxlg:justify-center mxlg:items-center mxlg:pb-[75px]`}
+      className={`flex flex-col justify-start items-start w-[50%] min-h-full bg-white px-[65px] relative py-[40px] mxlg:w-full mxlg:justify-center mxlg:items-center mxlg:pb-[75px]`}
     >
       <div
         className={`mt-[30%] mxlg:flex mxlg:flex-col mxlg:justify-center mxlg:items-center mxlg:mt-0 mxlg:py-[40px] ${
-          inView ? 'sticky top-[40%] left-0' : ''
+          inView ? `sticky top-[350px] left-0` : 'sticky top-[350px] left-0'
         }`}
       >
         <h1

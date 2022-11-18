@@ -12,6 +12,7 @@ module.exports = {
         'max-green-yellow': '#D9F542',
         alabaster: '#F3EFE2',
         'dark-vanilla': '#DCCAA8',
+        'whitest-white': '#F9F8F6',
       },
       fontFamily: {
         'space-grotesk': 'Space Grotesk, sans-serif',

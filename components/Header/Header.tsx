@@ -19,7 +19,7 @@ const Header: React.FC = (): JSX.Element => {
   }, []);
   return (
     <div
-      className={`w-full z-50 ease duration-[.4s] fixed ${
+      className={`w-full z-50 ease duration-[.4s] fixed border-b-[1px] border-charleston-green border-opacity-10 ${
         scrollDirection === 'down' && navbar ? '-top-36' : 'top-0'
       }`}
     >
