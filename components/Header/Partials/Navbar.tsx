@@ -4,11 +4,12 @@ import { setMenuStatus } from 'state/user/userSlice';
 import { useAppDispatch } from 'store/store-hooks';
 import Search from '@components/Search/Search';
 import MenuIcons from './MenuIcons';
+import Cart from '@components/Cart/Cart';
 const Navbar: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [cart, setCart] = useState(false);
   const handleMenu = () => {
     setMenu(!menu);
     dispatch(setMenuStatus(!menu));
@@ -16,6 +17,10 @@ const Navbar: React.FC = (): JSX.Element => {
   const handleSearch = () => {
     setSearch(!search);
     dispatch(setMenuStatus(!search));
+  };
+  const handleCart = () => {
+    setCart(!cart);
+    dispatch(setMenuStatus(!cart));
   };
   useEffect(() => {
     const handleCloseMenu = () => {
@@ -30,7 +35,7 @@ const Navbar: React.FC = (): JSX.Element => {
   }, [menu]);
 
   if (typeof window !== 'undefined') {
-    if (menu || search) {
+    if (menu || search || cart) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -41,16 +46,18 @@ const Navbar: React.FC = (): JSX.Element => {
     <>
       <div
         className={`${
-          menu || search ? 'brightness' : ''
-        } w-full bg-alabaster py-[20px] px-[60px] h-auto top-0 left-0 flex justify-between items-center gap-3 ease duration-500 z-30 flex-wrap mxsm:justify-center`}
+          menu || search || cart ? 'brightness' : ''
+        } w-full bg-alabaster py-[20px] px-[60px] h-auto top-0 left-0 flex justify-between items-center gap-3 ease duration-200 z-30 flex-wrap mxsm:justify-center`}
       >
-        <img
-          src="/static/assets/sm-logo.svg"
-          alt="logo"
-          className={`${
-            menu || search ? 'brightness-image' : ''
-          } h-[56px] px-3`}
-        />
+        <Link href="/">
+          <img
+            src="/static/assets/sm-logo.svg"
+            alt="logo"
+            className={`${
+              menu || search || cart ? 'brightness-image' : ''
+            } h-[56px] px-3`}
+          />
+        </Link>
         <ul className="text-charleston-green flex gap-8 justify-center items-center">
           <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black">
             <Link href="shop">SHOP</Link>
@@ -59,25 +66,13 @@ const Navbar: React.FC = (): JSX.Element => {
             <Link href="shop">LEARN</Link>
           </li>
           <li className="mxsm:hidden ease duration-200 fancy-link hover:text-black ">
-            <Link href="shop">Login</Link>
+            <Link href="/account/login">Login</Link>
           </li>
           <li>
-            <Search
-              search={search}
-              handleSearch={handleSearch}
-              isVisible={isVisible}
-              setIsVisible={setIsVisible}
-            />
+            <Search search={search} handleSearch={handleSearch} />
           </li>
           <li className="relative">
-            <span className="text-xsm absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-35%]">
-              0
-            </span>
-            <img
-              src="/static/svgs/cart-icon.svg"
-              alt="Cart icon"
-              className="min-h-[20px] h-[28px]"
-            />
+            <Cart cart={cart} handleCart={handleCart} />
           </li>
           <li className="hidden mxsm:flex">
             <button>

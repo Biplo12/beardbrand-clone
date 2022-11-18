@@ -40,6 +40,10 @@
   background-size: 100% 1px;
   color: inherit;
 }
+.fancy-link-hovered {
+  background-size: 100% 1px;
+  color: inherit;
+}
 
 .brightness {
   background-color: #3d3c38;

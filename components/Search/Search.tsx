@@ -2,36 +2,10 @@ import React, { useEffect, useRef } from 'react';
 interface ISeatch {
   search?: boolean;
   handleSearch?: any;
-  isVisible: boolean;
-  setIsVisible: any;
 }
 
-const Search: React.FC<ISeatch> = ({
-  search,
-  handleSearch,
-  isVisible,
-  setIsVisible,
-}): JSX.Element => {
+const Search: React.FC<ISeatch> = ({ search, handleSearch }): JSX.Element => {
   const wrapperRef = useRef<any>();
-
-  useEffect(() => {
-    document.addEventListener('click', handleClickOutside, false);
-    return () => {
-      document.removeEventListener('click', handleClickOutside, true);
-    };
-  }, []);
-
-  useEffect(() => {
-    search && setIsVisible(true);
-    if (!isVisible) {
-      handleSearch();
-    }
-  }, [isVisible]);
-  const handleClickOutside = (e: any) => {
-    if (wrapperRef?.current && !wrapperRef?.current?.contains(e.target)) {
-      setIsVisible(false);
-    }
-  };
 
   return (
     <>
@@ -43,7 +17,6 @@ const Search: React.FC<ISeatch> = ({
             className="min-h-[15px] h-[20px] cursor-pointer"
             onClick={() => {
               handleSearch();
-              setIsVisible(true);
             }}
           />
         </button>

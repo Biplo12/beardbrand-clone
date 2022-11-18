@@ -40,7 +40,7 @@ const Product: React.FC<IProduct> = ({
         </div>
       </div>
       <div>
-        <h3 className={`font-bold ease duration-200`}>{name}</h3>
+        <a className={`font-bold ease duration-200`}>{name}</a>
         <div className="flex justify-between items-center">
           <h4>${price}</h4>
           <img
