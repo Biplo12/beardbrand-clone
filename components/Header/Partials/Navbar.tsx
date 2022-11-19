@@ -60,7 +60,7 @@ const Navbar: React.FC = (): JSX.Element => {
         </Link>
         <ul className="text-charleston-green flex gap-8 justify-center items-center">
           <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black">
-            <Link href="shop">SHOP</Link>
+            <Link href="/collections">SHOP</Link>
           </li>
           <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black ">
             <Link href="shop">LEARN</Link>

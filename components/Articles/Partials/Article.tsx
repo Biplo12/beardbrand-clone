@@ -12,7 +12,7 @@ const Article: React.FC<IArticle> = ({
   articleImage,
 }): JSX.Element => {
   return (
-    <div className="flex text-black justify-center items-end border-t-[1px] border-l-[1px] border-charleston-green border-opacity-10 ease duration-[.3s] cursor-pointer hover:bg-[#F2F1F0]">
+    <div className="flex text-black justify-center items-end border-b-[1px] border-l-[0.5px] border-charleston-green border-opacity-10 ease duration-[.3s] cursor-pointer hover:bg-[#F2F1F0]">
       <div className="flex flex-col gap-1 w-1/2 p-10 mxlg:w-full">
         <h4 className="text-sm">{articleData}</h4>
         <h1 className="text-lg font-bold">
