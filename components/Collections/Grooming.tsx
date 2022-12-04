@@ -12,78 +12,78 @@ const Grooming: React.FC = (): JSX.Element => {
           </h1>
         </div>
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
         />
         <Product
-          image={'/static/assets/products/product-2.png'}
-          imageHovered={'/static/assets/products/product-1.png'}
+          image={'/static/assets/product-2.png'}
+          imageHovered={'/static/assets/product-1.png'}
           name={'UTILITYY BEARD OIL'}
           price={25}
           review={4.6}
