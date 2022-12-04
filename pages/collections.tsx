@@ -12,6 +12,7 @@ import OrderInfo from '@components/Collections/OrderInfo';
 import Head from 'next/head';
 import { useAppSelector } from '@store/store-hooks';
 import { selectUser } from '@state/user/userSlice';
+import DialogProvider from '@components/Dialogs/DialogProvider';
 
 const collections: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -26,6 +27,7 @@ const collections: NextPage = () => {
           type="image/x-icon"
         />
       </Head>
+      <DialogProvider />
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''

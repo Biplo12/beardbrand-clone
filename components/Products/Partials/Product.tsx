@@ -1,3 +1,5 @@
+import { openDialog } from '@state/dialog/dialogSlice';
+import { useAppDispatch } from '@store/store-hooks';
 import React, { useState } from 'react';
 
 interface IProduct {
@@ -16,6 +18,7 @@ const Product: React.FC<IProduct> = ({
   review,
 }): JSX.Element => {
   const [hovered, setHovered] = useState(false);
+  const dispatch = useAppDispatch();
   return (
     <div
       className="flex justify-center items-center flex-col gap-5 pb-3 overflow-hidden cursor-pointer outline outline-[1px] mb-[1px] outline-[rgba(43,46,48,0.05)] mxsm:w-[90%] mxsm:mxauto relative"
@@ -57,6 +60,14 @@ const Product: React.FC<IProduct> = ({
         <img
           src="/static/svgs/cart-add-icon.svg"
           alt="cart add icon"
+          onClick={() =>
+            dispatch(
+              openDialog({
+                currentDialog: 'ADD_TO_CART',
+                currentDialogAdditionalData: { name, price, image },
+              })
+            )
+          }
           className={`h-[24px] ease-in duration-[.2s]  ${
             hovered ? 'opacity-100' : 'opacity-0'
           } hover:scale-110 mxlg:opacity-100`}

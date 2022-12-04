@@ -12,6 +12,7 @@ import Footer from '@components/Common/Footer';
 import BottomBar from '@components/Common/BottomBar';
 import { useAppSelector } from '@store/store-hooks';
 import { selectUser } from '@state/user/userSlice';
+import DialogProvider from '@components/Dialogs/DialogProvider';
 
 const Home: NextPage = () => {
   const user = useAppSelector(selectUser);
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <div className="flex flex-col items-center justify-start text-white min-h-screen bg-black">
+        <DialogProvider />
         <Header />
         <div className={`${user.menu ? 'brightness-[25%]' : ''}`}>
           <Hero />

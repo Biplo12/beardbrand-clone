@@ -63,7 +63,7 @@ const Navbar: React.FC = (): JSX.Element => {
         <ul className="text-charleston-green flex gap-8 justify-center items-center">
           <li
             className={`font-bold mxsm:hidden ease duration-200 ${
-              router?.pathname.slice(1) === 'collections'
+              router?.pathname?.slice(1) === 'collections'
                 ? 'border-b-[1px] border-black opacity-100'
                 : 'fancy-link hover:text-black'
             }`}
@@ -76,7 +76,7 @@ const Navbar: React.FC = (): JSX.Element => {
           <li
             className={`mxsm:hidden ease duration-200 
           ${
-            router?.pathname.slice(1) === 'account/login'
+            router?.pathname?.slice(1) === 'account/login'
               ? 'border-b-[1px] border-black opacity-100'
               : 'fancy-link hover:text-black'
           }`}
