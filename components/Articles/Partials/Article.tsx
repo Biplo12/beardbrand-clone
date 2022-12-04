@@ -1,9 +1,9 @@
 import React from 'react';
 
 interface IArticle {
-  articleData: string;
-  articleTitle: string;
-  articleImage: string;
+  articleData?: string;
+  articleTitle?: string;
+  articleImage?: string;
 }
 
 const Article: React.FC<IArticle> = ({
