@@ -13,6 +13,7 @@ module.exports = {
         alabaster: '#F3EFE2',
         'dark-vanilla': '#DCCAA8',
         'whitest-white': '#F9F8F6',
+        plateu: '#D1E8E3',
       },
       fontFamily: {
         'space-grotesk': 'Space Grotesk, sans-serif',

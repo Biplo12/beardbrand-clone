@@ -1,15 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 interface ISeatch {
   search?: boolean;
   handleSearch?: any;
 }
 
 const Search: React.FC<ISeatch> = ({ search, handleSearch }): JSX.Element => {
-  const wrapperRef = useRef<any>();
-
   return (
     <>
-      <div ref={wrapperRef}>
+      <div>
         <button className="flex justify-center items-center" disabled={search}>
           <img
             src="/static/svgs/search-icon.svg"

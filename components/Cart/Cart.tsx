@@ -1,16 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 interface ISeatch {
   cart?: boolean;
   handleCart?: any;
 }
 
 const Cart: React.FC<ISeatch> = ({ cart, handleCart }): JSX.Element => {
-  const wrapperRef = useRef<any>();
-
   return (
     <>
-      <div ref={wrapperRef}>
-        <button className="flex justify-center items-center" disabled={cart}>
+      <div>
+        <button
+          className="flex justify-center items-center"
+          disabled={cart}
+          onClick={() => {
+            handleCart();
+          }}
+        >
           <span className="text-xsm absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-35%]">
             0
           </span>
@@ -18,9 +22,6 @@ const Cart: React.FC<ISeatch> = ({ cart, handleCart }): JSX.Element => {
             src="/static/svgs/cart-icon.svg"
             alt="Cart icon"
             className="min-h-[20px] h-[28px] cursor-pointer"
-            onClick={() => {
-              handleCart();
-            }}
           />
         </button>
         <div

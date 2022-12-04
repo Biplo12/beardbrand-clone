@@ -1,18 +1,18 @@
 import React from 'react';
+import Head from 'next/head';
 import type { NextPage } from 'next';
-import LoginForm from '@components/Login/LoginForm/LoginForm';
+import RegisterForm from '@components/Register/RegisterForm';
 import Header from '@components/Header/Header';
 import Newsletter from '@components/Common/Newsletter';
 import Footer from '@components/Common/Footer';
 import BottomBar from '@components/Common/BottomBar';
 import Bundle from '@components/Common/Bundle';
-import Head from 'next/head';
 
-const login: NextPage = () => {
+const register: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Login - Beardbrand </title>
+        <title>Register - Beardbrand </title>
         <link
           rel="shortcut icon"
           href="/static/assets/icon.png"
@@ -21,7 +21,7 @@ const login: NextPage = () => {
       </Head>
       <div className="flex flex-col items-center justify-start text-white min-h-screen bg-black">
         <Header />
-        <LoginForm />
+        <RegisterForm />
         <Bundle />
         <Newsletter />
         <Footer />
@@ -31,4 +31,4 @@ const login: NextPage = () => {
   );
 };
 
-export default login;
+export default register;
