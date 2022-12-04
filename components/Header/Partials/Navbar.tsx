@@ -104,7 +104,7 @@ const Navbar: React.FC = (): JSX.Element => {
           <ul className="text-charleston-green flex gap-10 justify-center items-start flex-col px-[60px] pt-[50px]">
             <div className="flex flex-col gap-3">
               <li className="font-bold">
-                <Link href="shop">SHOP</Link>
+                <Link href="/collections">SHOP</Link>
               </li>
               <li className="font-bold ">
                 <Link href="shop">LEARN</Link>
