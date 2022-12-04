@@ -5,11 +5,13 @@ import { useAppDispatch } from 'store/store-hooks';
 import Search from '@components/Search/Search';
 import MenuIcons from './MenuIcons';
 import Cart from '@components/Cart/Cart';
+import { useRouter } from 'next/router';
 const Navbar: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [cart, setCart] = useState(false);
+  const router = useRouter();
   const handleMenu = () => {
     setMenu(!menu);
     dispatch(setMenuStatus(!menu));
@@ -59,13 +61,26 @@ const Navbar: React.FC = (): JSX.Element => {
           />
         </Link>
         <ul className="text-charleston-green flex gap-8 justify-center items-center">
-          <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black">
+          <li
+            className={`font-bold mxsm:hidden ease duration-200 ${
+              router?.pathname.slice(1) === 'collections'
+                ? 'border-b-[1px] border-black opacity-100'
+                : 'fancy-link hover:text-black'
+            }`}
+          >
             <Link href="/collections">SHOP</Link>
           </li>
           <li className="font-bold mxsm:hidden ease duration-200 fancy-link hover:text-black ">
             <Link href="shop">LEARN</Link>
           </li>
-          <li className="mxsm:hidden ease duration-200 fancy-link hover:text-black ">
+          <li
+            className={`mxsm:hidden ease duration-200 
+          ${
+            router?.pathname.slice(1) === 'account/login'
+              ? 'border-b-[1px] border-black opacity-100'
+              : 'fancy-link hover:text-black'
+          }`}
+          >
             <Link href="/account/login">Login</Link>
           </li>
           <li>

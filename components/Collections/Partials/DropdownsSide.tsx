@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 const DropdownsSide: React.FC = (): JSX.Element => {
   const [dropdown, setDropdown] = useState(false);
   const [index, setIndex] = useState<number>();
-  const handleDropdown = () => setDropdown(!dropdown);
-  const handleReset = () => {
-    setDropdown(false);
-    setIndex(-1);
-  };
+
+  //TODO - CREATE COMPONENTS FOR EVERY DROPDOWN
   return (
     <div className="w-1/2 h-full flex justify-center items-center mxlg:w-[90%] mxsm:mx-auto">
       <ul className="w-[90%] mx-auto flex flex-col gap-5">
@@ -18,20 +15,11 @@ const DropdownsSide: React.FC = (): JSX.Element => {
           <div
             className="w-full flex justify-between items-center cursor-pointer"
             onClick={() => {
-              handleReset();
+              dropdown && index === 0 ? setDropdown(false) : setDropdown(true);
               setIndex(0);
-              handleDropdown();
             }}
           >
-            <h3
-              className="font-bold cursor-pointer"
-              onClick={() => {
-                setIndex(0);
-                handleDropdown();
-              }}
-            >
-              SHIPPING
-            </h3>
+            <h3 className="font-bold cursor-pointer">SHIPPING</h3>
             <img
               src={`${
                 dropdown && index === 0
@@ -82,20 +70,11 @@ const DropdownsSide: React.FC = (): JSX.Element => {
           <div
             className="w-full flex justify-between items-center cursor-pointer"
             onClick={() => {
-              handleReset();
+              dropdown && index === 1 ? setDropdown(false) : setDropdown(true);
               setIndex(1);
-              handleDropdown();
             }}
           >
-            <h3
-              className="font-bold cursor-pointer"
-              onClick={() => {
-                setIndex(1);
-                handleDropdown();
-              }}
-            >
-              RETURNS
-            </h3>
+            <h3 className="font-bold cursor-pointer">RETURNS</h3>
             <img
               src={`${
                 dropdown && index === 1
@@ -149,20 +128,11 @@ const DropdownsSide: React.FC = (): JSX.Element => {
           <div
             className="w-full flex justify-between items-center cursor-pointer"
             onClick={() => {
-              handleReset();
+              dropdown && index === 2 ? setDropdown(false) : setDropdown(true);
               setIndex(2);
-              handleDropdown();
             }}
           >
-            <h3
-              className="font-bold cursor-pointer"
-              onClick={() => {
-                setIndex(2);
-                handleDropdown();
-              }}
-            >
-              GUARANTEES
-            </h3>
+            <h3 className="font-bold cursor-pointer">GUARANTEES</h3>
             <img
               src={`${
                 dropdown && index === 1
