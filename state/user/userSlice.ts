@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IUserReducerInterface } from '@interfaces/index';
+import { RootState } from '@store/store';
 
 const initialState: IUserReducerInterface = {
   status: {
@@ -24,7 +25,7 @@ export const userSlice = createSlice({
   },
 });
 
-export const selectUser = (state: any) => state.user;
+export const selectUser = (state: RootState) => state.user;
 
 export const { setStatus, setMenuStatus } = userSlice.actions;
 

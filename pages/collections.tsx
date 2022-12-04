@@ -14,6 +14,7 @@ import { useAppSelector } from '@store/store-hooks';
 import { selectUser } from '@state/user/userSlice';
 
 const collections: NextPage = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useAppSelector(selectUser);
   return (
     <>
