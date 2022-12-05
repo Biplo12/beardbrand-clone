@@ -2,6 +2,7 @@ import { openDialog } from '@state/dialog/dialogSlice';
 import { useAppDispatch } from '@store/store-hooks';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import ReviewStars from './ReviewStars';
 
 interface IProduct {
   image: string;
@@ -29,14 +30,9 @@ const Product: React.FC<IProduct> = ({
       <div
         className={`${
           hovered ? 'opacity-100' : 'opacity-0'
-        } flex justify-start items-center ease duration-150 z-10`}
+        } flex justify-start items-center ease duration-150 z-10 absolute top-5 left-5`}
       >
-        <div className="flex gap-1 bg-max-green-yellow py-2 px-3 border-[1px] border-charleston-green border-opacity-10 absolute top-5 left-5">
-          <p className="text-xsm">{review}</p>
-          <p className="text-xsm">/</p>
-          <p className="text-xsm">5</p>
-          <img src="/static/svgs/star-icon.svg" alt="star icon" />
-        </div>
+        <ReviewStars review={5} />
       </div>
       <div className="relative">
         <Link href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}>
