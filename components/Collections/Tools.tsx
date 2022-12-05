@@ -1,7 +1,7 @@
 import ButtonArrow from '@components/Common/ButtonArrow';
 import Link from 'next/link';
 import React from 'react';
-import Product from './Partials/Product';
+import Product from '@common/Product';
 const Tools: React.FC = (): JSX.Element => {
   return (
     <div className="w-full text-charleston-green bg-white">

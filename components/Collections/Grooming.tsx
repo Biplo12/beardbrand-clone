@@ -1,7 +1,7 @@
-import ButtonArrow from '@components/Common/ButtonArrow';
+import ButtonArrow from '@common/ButtonArrow';
 import Link from 'next/link';
 import React from 'react';
-import Product from './Partials/Product';
+import Product from '@common/Product';
 const Grooming: React.FC = (): JSX.Element => {
   return (
     <div className="w-full text-charleston-green bg-white">

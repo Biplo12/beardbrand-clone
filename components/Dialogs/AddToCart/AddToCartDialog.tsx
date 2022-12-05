@@ -1,18 +1,37 @@
 import { Dialog, Transition } from '@headlessui/react';
+import { Tooltip } from '@mui/material';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { closeDialog, selectDialog } from '@state/dialog/dialogSlice';
 import { useAppDispatch, useAppSelector } from '@store/store-hooks';
-import React from 'react';
+import React, { useState } from 'react';
 import DialogCloseButton from '../Partials/DialogCloseButton';
 const AddToCartDialog: React.FC = (): JSX.Element => {
+  const [imageChange, setImageChange] = useState(false);
   const dispatch = useAppDispatch();
   const dialog = useAppSelector(selectDialog);
   const props = dialog?.currentDialogAdditionalData;
+
+  const theme = createTheme({
+    components: {
+      MuiTooltip: {
+        styleOverrides: {
+          tooltip: {
+            fontSize: '.9em',
+            textAlign: 'center',
+            color: 'white',
+            width: '200px',
+            backgroundColor: 'rgba(0, 0, 0, 0.87)',
+          },
+        },
+      },
+    },
+  });
   return (
     <>
       <Transition appear show={dialog.isOpen} as="div">
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 overflow-y-auto w-full"
+          className="fixed inset-0 z-100 overflow-y-auto w-full"
           onClose={() => dispatch(closeDialog())}
         >
           <div className="min-h-screen text-center flex justify-center items-center w-full">
@@ -54,7 +73,7 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
                       {props?.name}
                     </h3>
                     <h5 className="text-md font-medium leading-6 text-gray-900">
-                      ${props?.price}
+                      ${imageChange ? props?.price - 1 : props?.price}
                     </h5>
                   </div>
                   <DialogCloseButton />
@@ -62,7 +81,11 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
                 <div className="flex mxmd:flex-col justify-center items-center">
                   <div className="cursor-pointer w-[40%] mxmd:w-[90%] mxmd:mx-auto">
                     <img
-                      src={props?.image}
+                      src={
+                        !imageChange
+                          ? props?.image
+                          : props?.imageWithoutDispenser
+                      }
                       alt="product"
                       className="h-[300px] mxmd:h-full"
                     />
@@ -73,12 +96,27 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
                       BOLD FORTUNE
                     </option>
                     <div className="flex gap-2">
-                      <input type="checkbox" className="outline-none" />
+                      <input
+                        type="checkbox"
+                        className="form-check-input appearance-none h-4 w-4 border-2 border-black bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        onChange={() => setImageChange(!imageChange)}
+                      />
                       <label>Order without a dispenser.</label>
-                      <img src="/static/svgs/info-icon.svg" alt="info icon" />
+                      <ThemeProvider theme={theme}>
+                        <Tooltip
+                          placement="bottom"
+                          title="Save $1 by re-using your dispenser from a previous order. Your item will ship with only a screw cap."
+                        >
+                          <img
+                            src="/static/svgs/info-icon.svg"
+                            alt="info icon"
+                            className="cursor-pointer"
+                          />
+                        </Tooltip>
+                      </ThemeProvider>
                     </div>
                     <div className="flex gap-3 flex-col w-full mxmd:flex-row">
-                      <button className="border-[2px] text-sm border-charleston-green py-3 px-10 min-w-auto">
+                      <button className="border-[2px] text-sm border-charleston-green py-3 px-10 min-w-auto bg-gradient-to-bl from-[#DDFD4F]  to-[#62e13e]">
                         <p className="hover:scale-105 ease duration-150 w-full">
                           ADD TO CART
                         </p>

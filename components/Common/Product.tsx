@@ -60,17 +60,22 @@ const Product: React.FC<IProduct> = ({
         <img
           src="/static/svgs/cart-add-icon.svg"
           alt="cart add icon"
-          className={`h-[24px] ease-in duration-[.2s]  ${
-            hovered ? 'opacity-100' : 'opacity-0'
-          } hover:scale-110 mxlg:opacity-100`}
           onClick={() =>
             dispatch(
               openDialog({
                 currentDialog: 'ADD_TO_CART',
-                currentDialogAdditionalData: { name, price, image },
+                currentDialogAdditionalData: {
+                  name,
+                  price,
+                  image,
+                  imageWithoutDispenser: imageHovered,
+                },
               })
             )
           }
+          className={`h-[24px] ease-in duration-[.2s]  ${
+            hovered ? 'opacity-100' : 'opacity-0'
+          } hover:scale-110 mxlg:opacity-100`}
         />
       </div>
     </div>
