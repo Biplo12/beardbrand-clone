@@ -28,12 +28,12 @@ const collections: NextPage = () => {
         />
       </Head>
       <DialogProvider />
+      <Header />
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''
         } flex flex-col items-center justify-start text-white min-h-screen bg-black`}
       >
-        <Header />
         <BundleAdCollections />
         <Grooming />
         <Tools />

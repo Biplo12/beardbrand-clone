@@ -28,7 +28,7 @@ const Product: React.FC<IProduct> = ({
       <div
         className={`${
           hovered ? 'opacity-100' : 'opacity-0'
-        } flex justify-start items-center ease duration-150 z-30`}
+        } flex justify-start items-center ease duration-150 z-10`}
       >
         <div className="flex gap-1 bg-max-green-yellow py-2 px-3 border-[1px] border-charleston-green border-opacity-10 absolute top-5 left-5">
           <p className="text-xsm">{review}</p>

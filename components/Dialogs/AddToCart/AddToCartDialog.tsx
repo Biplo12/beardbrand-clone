@@ -31,7 +31,7 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
       <Transition appear show={dialog.isOpen} as="div">
         <Dialog
           as="div"
-          className="fixed inset-0 z-100 overflow-y-auto w-full"
+          className="fixed inset-0 z-[50] w-full"
           onClose={() => dispatch(closeDialog())}
         >
           <div className="min-h-screen text-center flex justify-center items-center w-full">

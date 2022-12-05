@@ -1,3 +1,5 @@
+import { selectUser } from '@state/user/userSlice';
+import { useAppSelector } from '@store/store-hooks';
 import React from 'react';
 interface ISeatch {
   search?: boolean;
@@ -5,21 +7,27 @@ interface ISeatch {
 }
 
 const Search: React.FC<ISeatch> = ({ search, handleSearch }): JSX.Element => {
+  const user = useAppSelector(selectUser);
+
   return (
     <>
-      <div>
-        <button className="flex justify-center items-center" disabled={search}>
-          <img
-            src="/static/svgs/search-icon.svg"
-            alt="Search icon"
-            className="min-h-[15px] h-[20px] cursor-pointer"
-            onClick={() => {
-              handleSearch();
-            }}
-          />
-        </button>
+      <button className="flex justify-center items-center" disabled={search}>
+        <img
+          src="/static/svgs/search-icon.svg"
+          alt="Search icon"
+          className="min-h-[15px] h-[20px] cursor-pointer"
+          onClick={() => {
+            handleSearch();
+          }}
+        />
+      </button>
+      <div
+        className={`${
+          user?.menu ? 'w-[75%] h-full fixed top-0 left-0 z-10' : ''
+        }`}
+      >
         <div
-          className={`fixed ease duration-500 w-[25%] h-[100vh] text-black top-0 bg-alabaster mxlg:w-[60%] ${
+          className={`fixed ease duration-500 w-[25%] h-[100vh] text-charleston-green top-0 bg-alabaster mxlg:w-[60%] ${
             search ? 'right-0 z-30' : 'right-[-1800px]'
           }`}
         >

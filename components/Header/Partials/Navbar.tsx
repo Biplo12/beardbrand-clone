@@ -86,7 +86,7 @@ const Navbar: React.FC = (): JSX.Element => {
           <li>
             <Search search={search} handleSearch={handleSearch} />
           </li>
-          <li className="relative">
+          <li>
             <Cart cart={cart} handleCart={handleCart} />
           </li>
           <li className="hidden mxsm:flex">

@@ -7,8 +7,12 @@ import Footer from '@components/Common/Footer';
 import BottomBar from '@components/Common/BottomBar';
 import Bundle from '@components/Common/Bundle';
 import Head from 'next/head';
+import { selectUser } from '@state/user/userSlice';
+import { useAppSelector } from '@store/store-hooks';
 
 const login: NextPage = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const user = useAppSelector(selectUser);
   return (
     <>
       <Head>
@@ -19,8 +23,12 @@ const login: NextPage = () => {
           type="image/x-icon"
         />
       </Head>
-      <div className="flex flex-col items-center justify-start text-white min-h-screen bg-black">
-        <Header />
+      <Header />
+      <div
+        className={`${
+          user.menu ? 'brightness-[25%]' : ''
+        } flex flex-col items-center justify-start text-white min-h-screen bg-black`}
+      >
         <LoginForm />
         <Bundle />
         <Newsletter />
