@@ -1,3 +1,5 @@
+import { selectUser } from '@state/user/userSlice';
+import { useAppSelector } from '@store/store-hooks';
 import React from 'react';
 interface ISeatch {
   cart?: boolean;
@@ -5,28 +7,31 @@ interface ISeatch {
 }
 
 const Cart: React.FC<ISeatch> = ({ cart, handleCart }): JSX.Element => {
+  const user = useAppSelector(selectUser);
   return (
     <>
-      <div>
-        <button
-          className="flex justify-center items-center"
-          disabled={cart}
-          onClick={() => {
-            handleCart();
-          }}
-        >
-          <span className="text-xsm absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-35%]">
-            0
-          </span>
-          <img
-            src="/static/svgs/cart-icon.svg"
-            alt="Cart icon"
-            className="min-h-[20px] h-[28px] cursor-pointer"
-          />
-        </button>
+      <button
+        className="flex justify-center items-center relative"
+        disabled={cart}
+        onClick={() => {
+          handleCart();
+        }}
+      >
+        <span className="text-xsm absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-35%]">
+          0
+        </span>
+        <img
+          src="/static/svgs/cart-icon.svg"
+          alt="Cart icon"
+          className="min-h-[20px] h-[28px] cursor-pointer"
+        />
+      </button>
+      <div
+        className={`${user?.menu ? 'h-full fixed top-0 left-0 w-[75%]' : ''}`}
+      >
         <div
-          className={`fixed ease duration-500 w-[18%] h-[100vh] text-charleston-green top-0 bg-alabaster mxlg:w-[60%] ${
-            cart ? 'right-0 z-30' : 'right-[-1800px]'
+          className={`fixed ease duration-500 w-[25%] h-[100vh] text-charleston-green top-0 bg-alabaster mxlg:w-[60%] ${
+            cart ? 'right-0 z-20' : 'right-[-1800px]'
           }`}
         >
           <div className="flex w-full h-[8vh] justify-between items-center px-[25px] border-b-[1px] border-charleston-green border-opacity-5">

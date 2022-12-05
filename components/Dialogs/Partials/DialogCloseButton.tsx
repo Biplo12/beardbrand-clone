@@ -8,7 +8,11 @@ const DialogCloseButton: React.FC = (): JSX.Element => {
       className="p-3 border border-charleston-green border-opacity-20 cursor-pointer"
       onClick={() => dispatch(closeDialog())}
     >
-      <img src="/static/svgs/close-icon.svg" alt="close icon" />
+      <img
+        src="/static/svgs/close-icon.svg"
+        alt="close icon"
+        className="ease duration-200 hover:scale-105"
+      />
     </div>
   );
 };

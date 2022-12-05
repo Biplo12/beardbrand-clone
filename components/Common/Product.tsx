@@ -1,5 +1,6 @@
 import { openDialog } from '@state/dialog/dialogSlice';
 import { useAppDispatch } from '@store/store-hooks';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 interface IProduct {
@@ -28,7 +29,7 @@ const Product: React.FC<IProduct> = ({
       <div
         className={`${
           hovered ? 'opacity-100' : 'opacity-0'
-        } flex justify-start items-center ease duration-150 z-30`}
+        } flex justify-start items-center ease duration-150 z-10`}
       >
         <div className="flex gap-1 bg-max-green-yellow py-2 px-3 border-[1px] border-charleston-green border-opacity-10 absolute top-5 left-5">
           <p className="text-xsm">{review}</p>
@@ -38,13 +39,15 @@ const Product: React.FC<IProduct> = ({
         </div>
       </div>
       <div className="relative">
-        <img
-          src={!hovered ? image : imageHovered}
-          alt="product"
-          className={`max-h-[360px] ease-in duration-[.3s] object-cover ${
-            hovered ? 'scale-105 ' : ''
-          }`}
-        />
+        <Link href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}>
+          <img
+            src={!hovered ? image : imageHovered}
+            alt="product"
+            className={`max-h-[360px] ease-in duration-[.3s] object-cover ${
+              hovered ? 'scale-105 ' : ''
+            }`}
+          />
+        </Link>
       </div>
       <div className="w-full px-10 flex justify-between items-center mxsm:px-5 gap-3">
         <div className="flex justify-center items-start flex-col">
@@ -60,17 +63,22 @@ const Product: React.FC<IProduct> = ({
         <img
           src="/static/svgs/cart-add-icon.svg"
           alt="cart add icon"
-          className={`h-[24px] ease-in duration-[.2s]  ${
-            hovered ? 'opacity-100' : 'opacity-0'
-          } hover:scale-110 mxlg:opacity-100`}
           onClick={() =>
             dispatch(
               openDialog({
                 currentDialog: 'ADD_TO_CART',
-                currentDialogAdditionalData: { name, price, image },
+                currentDialogAdditionalData: {
+                  name,
+                  price,
+                  image,
+                  imageWithoutDispenser: imageHovered,
+                },
               })
             )
           }
+          className={`h-[24px] ease-in duration-[.2s]  ${
+            hovered ? 'opacity-100' : 'opacity-0'
+          } hover:scale-110 mxlg:opacity-100`}
         />
       </div>
     </div>

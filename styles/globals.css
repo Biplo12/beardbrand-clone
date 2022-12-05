@@ -47,3 +47,7 @@
 .brightness {
   background-color: #3d3c38;
 }
+
+.form-checker {
+  --form-control-color: red;
+}
