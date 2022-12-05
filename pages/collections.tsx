@@ -40,8 +40,11 @@ const collections: NextPage = () => {
         <OrderInfo />
         <Bundle />
         <Newsletter />
-        <Footer />
-        <BottomBar />
+        <div className="flex flex-col gap-3 w-full">
+          <Footer />
+          <div className="w-[90%] border-t-[1px] border-alabaster border-opacity-[30%] mx-auto" />
+          <BottomBar />
+        </div>
       </div>
     </>
   );

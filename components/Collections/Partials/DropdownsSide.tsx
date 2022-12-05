@@ -26,7 +26,7 @@ const DropdownsSide: React.FC = (): JSX.Element => {
                   ? '/static/svgs/minus-icon.svg'
                   : '/static/svgs/plus-icon.svg'
               }`}
-              alt="plus icon"
+              alt="extend icon"
             />
           </div>
           <div

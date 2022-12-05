@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 const Footer: React.FC = (): JSX.Element => {
   return (
-    <div className="flex w-full min-h-[50vh] h-auto text-dark-vanilla justify-between items-center p-10 flex-wrap gap-3">
+    <div className="flex w-full min-h-[50vh] h-auto text-dark-vanilla justify-between items-center p-10 flex-wrap gap-3 bg-black">
       <div className="max-w-[500px] gap-3 flex flex-col">
         <h1 className="font-pano font-bold text-sm">
           SHOPPERS WITH DISABILITIES

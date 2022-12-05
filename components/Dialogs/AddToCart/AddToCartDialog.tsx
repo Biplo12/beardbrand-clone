@@ -1,3 +1,4 @@
+import AddToCartButton from '@components/Common/AddToCartButton';
 import { Dialog, Transition } from '@headlessui/react';
 import { Tooltip } from '@mui/material';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
@@ -116,11 +117,7 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
                       </ThemeProvider>
                     </div>
                     <div className="flex gap-3 flex-col w-full mxmd:flex-row">
-                      <button className="border-[2px] text-sm border-charleston-green py-3 px-10 min-w-auto bg-gradient-to-bl from-[#DDFD4F]  to-[#62e13e]">
-                        <p className="hover:scale-105 ease duration-150 w-full">
-                          ADD TO CART
-                        </p>
-                      </button>
+                      <AddToCartButton />
                       <button className="border-[2px] text-sm border-charleston-green py-3 px-10 min-w-auto">
                         <p className="hover:scale-105 ease duration-150 w-full">
                           VISIT PRODUCT PAGE
