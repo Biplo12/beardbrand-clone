@@ -1,5 +1,6 @@
 import { openDialog } from '@state/dialog/dialogSlice';
 import { useAppDispatch } from '@store/store-hooks';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 interface IProduct {
@@ -38,13 +39,15 @@ const Product: React.FC<IProduct> = ({
         </div>
       </div>
       <div className="relative">
-        <img
-          src={!hovered ? image : imageHovered}
-          alt="product"
-          className={`max-h-[360px] ease-in duration-[.3s] object-cover ${
-            hovered ? 'scale-105 ' : ''
-          }`}
-        />
+        <Link href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}>
+          <img
+            src={!hovered ? image : imageHovered}
+            alt="product"
+            className={`max-h-[360px] ease-in duration-[.3s] object-cover ${
+              hovered ? 'scale-105 ' : ''
+            }`}
+          />
+        </Link>
       </div>
       <div className="w-full px-10 flex justify-between items-center mxsm:px-5 gap-3">
         <div className="flex justify-center items-start flex-col">
