@@ -12,23 +12,23 @@ const BreadCrumpsComponent: React.FC = (): JSX.Element => {
       className="w-full h-[50px] flex justify-start items-center bg-white px-[50px] border-b border-charleston-green border-opacity-10"
     >
       <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          MUI
+        <Link underline="none" color="#2B2E30" fontStyle="Pano" href="/">
+          Home
         </Link>
         <Link
-          underline="hover"
-          color="inherit"
+          underline="none"
+          color="#2B2E30"
           href="/material-ui/getting-started/installation/"
         >
-          Core
+          Collections
         </Link>
         <Link
-          underline="hover"
-          color="text.primary"
+          underline="none"
+          color="black"
           href="/material-ui/react-breadcrumbs/"
           aria-current="page"
         >
-          Breadcrumbs
+          Sea Salt Spray
         </Link>
       </Breadcrumbs>
     </div>
