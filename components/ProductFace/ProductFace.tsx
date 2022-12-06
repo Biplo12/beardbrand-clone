@@ -1,9 +1,9 @@
 import React from 'react';
 import ContentSide from './Partials/ContentSide';
-import SliderSide from './Partials/SliderSide';
+import SliderSide from './SliderSide';
 const ProductFace: React.FC = (): JSX.Element => {
   return (
-    <div className="flex w-full h-full mxlg:flex-col bg-white text-black">
+    <div className="flex w-full h-full bg-white text-black">
       <SliderSide />
       <ContentSide />
     </div>
