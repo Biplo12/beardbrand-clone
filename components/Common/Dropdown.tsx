@@ -22,8 +22,8 @@ const Dropdown: React.FC<IDropdown> = ({
   return (
     <li
       className={`${
-        dropdown && index === indexOnclick ? 'min-h-auto h-auto' : 'h-[40px]'
-      } flex justify-center gap-3 items-center flex-col pb-3 border-b-[1px] border-charleston-green border-opacity-10 ease duration-150 mxlg:m-0`}
+        dropdown && index === indexOnclick ? '' : 'h-[40px]'
+      } flex justify-center gap-3 items-start flex-col pb-3 border-b-[1px] border-charleston-green border-opacity-10 ease duration-150 mxlg:m-0`}
     >
       <div
         className="w-full flex justify-between items-center cursor-pointer"
@@ -47,9 +47,9 @@ const Dropdown: React.FC<IDropdown> = ({
       <div
         className={`${
           dropdown && index === indexOnclick
-            ? 'opacity-100 overflow-y-hidden'
+            ? 'opacity-100 overflow-y-auto py-3'
             : 'opacity-0 overflow-hidden'
-        } ease duration-150 flex flex-col gap-5`}
+        } ease duration-300 flex flex-col gap-5`}
       >
         {content}
       </div>

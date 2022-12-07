@@ -1,10 +1,10 @@
-import Dropdown from '@components/Collections/Partials/Dropdown';
+import Dropdown from '@components/Common/Dropdown';
 import React, { useState } from 'react';
 const ProductInfoDropdown: React.FC = (): JSX.Element => {
   const [dropdown, setDropdown] = useState<boolean>(false);
   const [index, setIndex] = useState<any>(null);
   return (
-    <div className="w-full h-full flex justify-center items-center ">
+    <div className="w-full h-full flex justify-center items-center pt-10 pb-16 ">
       <ul className="w-full flex flex-col gap-5 justify-start">
         <Dropdown
           dropdown={dropdown}
@@ -117,7 +117,7 @@ const ProductInfoDropdown: React.FC = (): JSX.Element => {
               <p>
                 If you don`t love Beardbrand Utility Balm or the fragrance you
                 purchased, we`ll buy it back or exchange it for another
-                fragrance—no questions asked. Just head over to our
+                fragrance—no questions asked. Just head over to our{' '}
                 <u>
                   <a href="#" target={'_blank'}>
                     Returns & Exchanges

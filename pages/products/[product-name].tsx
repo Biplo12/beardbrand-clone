@@ -10,9 +10,9 @@ import BottomBar from '@components/Common/BottomBar';
 import { useAppSelector } from '@store/store-hooks';
 import { selectUser } from '@state/user/userSlice';
 import DialogProvider from '@components/Dialogs/DialogProvider';
-import OrderInfo from '@components/Collections/OrderInfo';
 import ProductFace from '@components/ProductFace/ProductFace';
 import BreadCrumpsComponent from '@components/ProductFace/BreadCrumpsComponent';
+import ProductDropdowns from '@components/ProductFace/Partials/ProductDropdowns';
 const productPage: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useAppSelector(selectUser);
@@ -36,7 +36,7 @@ const productPage: NextPage = () => {
           {/* <Video/> */}
 
           {/* TODO - OTHER COMPONENT FOR INFO */}
-          <OrderInfo />
+          <ProductDropdowns />
 
           {/* <Reviews/> */}
           <BundleAdCollections />

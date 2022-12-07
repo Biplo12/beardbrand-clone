@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dropdown from './Dropdown';
+import Dropdown from '../../Common/Dropdown';
 const DropdownsSide: React.FC = (): JSX.Element => {
   const [dropdown, setDropdown] = useState(false);
   const [index, setIndex] = useState<any>(null);
