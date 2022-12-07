@@ -3,9 +3,10 @@ import DispencerInput from '@components/Common/DispencerInput';
 import Fragnances from '@components/Dialogs/AddToCart/Partials/Fragnances';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import AboutProduct from './AboutProduct';
-import ProductCredentials from './ProductCredentials';
-import Quantity from './Quantity';
+import AboutProduct from './Partials/AboutProduct';
+import ProductCredentials from './Partials/ProductCredentials';
+import ProductInfoDropdown from './Partials/ProductInfoDropdown';
+import Quantity from './Partials/Quantity';
 const ContentSide: React.FC = (): JSX.Element => {
   const router = useRouter();
   const name: string | any = router?.query['product-name'];
@@ -22,6 +23,9 @@ const ContentSide: React.FC = (): JSX.Element => {
         <Quantity />
         <AddToCartButton />
         <AboutProduct />
+        <div className="w-full">
+          <ProductInfoDropdown />
+        </div>
       </div>
     </div>
   );

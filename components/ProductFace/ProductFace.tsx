@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentSide from './Partials/ContentSide';
+import ContentSide from './ContentSide';
 import SliderSide from './SliderSide';
 const ProductFace: React.FC = (): JSX.Element => {
   return (
