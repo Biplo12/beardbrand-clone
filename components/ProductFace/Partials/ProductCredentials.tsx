@@ -10,8 +10,8 @@ const ProductCredentials: React.FC<IProductCredentials> = ({
 }): JSX.Element => {
   //TODO DYNAMIC DATA FROM API CALL TO PRODUCT ENDPOINT WITH PRODUCT ID/NAME
   return (
-    <div className="w-full flex justify-center items-start flex-col">
-      <h1 className="capitalize font-bold font-pano text-3xl">{`${name?.replaceAll(
+    <div className="w-full flex justify-center items-start flex-col text-charleston-green">
+      <h1 className="uppercase font-bold font-pano text-2xl">{`${name?.replaceAll(
         '-',
         ' '
       )}`}</h1>
