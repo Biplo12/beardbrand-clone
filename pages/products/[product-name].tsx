@@ -13,6 +13,7 @@ import DialogProvider from '@components/Dialogs/DialogProvider';
 import ProductFace from '@components/ProductFace/ProductFace';
 import BreadCrumpsComponent from '@components/ProductFace/BreadCrumpsComponent';
 import ProductDropdowns from '@components/ProductFace/Partials/ProductDropdowns';
+import Bundle from '@components/Common/Bundle';
 const productPage: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useAppSelector(selectUser);
@@ -41,6 +42,7 @@ const productPage: NextPage = () => {
           {/* <Reviews/> */}
           <BundleAdCollections />
           <Products />
+          <Bundle />
           <Newsletter />
           <div className="flex flex-col gap-3 w-full">
             <Footer />
