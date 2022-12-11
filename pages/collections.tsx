@@ -33,7 +33,7 @@ const collections: NextPage = () => {
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''
-        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[14.5vh]`}
+        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[130px]`}
       >
         <BreadCrumpsCollections />
         <BundleAdCollections />

@@ -25,7 +25,7 @@ const productPage: NextPage = () => {
     <div className="flex flex-col items-center justify-start text-white min-h-screen bg-black">
       <DialogProvider />
       <Header />
-      <div className={`mt-[14vh] ${user.menu ? 'brightness-[25%]' : ''}`}>
+      <div className={`${user.menu ? 'brightness-[25%]' : ''} mt-[130px]`}>
         <BreadCrumpsProduct />
         <ProductFace />
         <Video videoUrl={VIDEO_URL} />

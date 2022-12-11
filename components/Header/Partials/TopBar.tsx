@@ -7,7 +7,7 @@ const TopBar: React.FC = (): JSX.Element => {
     <div
       className={`${
         user.menu ? 'brightness-[25%]' : ''
-      } bg-charleston-green w-full flex justify-center items-center gap-1 p-2 text-xsm text-white h-[4vh]`}
+      } bg-charleston-green w-full flex justify-center items-center gap-1 p-2 text-xsm text-white h-[30px]`}
     >
       <span className="text-max-green-yellow cursor-pointer">
         Bundle 3 products + get 1 mote free

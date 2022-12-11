@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center justify-start text-white min-h-screen bg-black">
         <DialogProvider />
         <Header />
-        <div className={`${user.menu ? 'brightness-[25%]' : ''}`}>
+        <div className={`${user.menu ? 'brightness-[25%]' : ''} mt-[130px]`}>
           <Hero />
           <InfoCard />
           <BundleAd />
