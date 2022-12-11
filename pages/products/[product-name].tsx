@@ -14,6 +14,7 @@ import ProductFace from '@components/ProductFace/ProductFace';
 import BreadCrumpsComponent from '@components/ProductFace/BreadCrumpsComponent';
 import ProductDropdowns from '@components/ProductFace/Partials/ProductDropdowns';
 import Bundle from '@components/Common/Bundle';
+import Video from '@components/ProductFace/Partials/Video';
 const productPage: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useAppSelector(selectUser);
@@ -34,11 +35,8 @@ const productPage: NextPage = () => {
         <div className={`mt-[14vh] ${user.menu ? 'brightness-[25%]' : ''}`}>
           <BreadCrumpsComponent />
           <ProductFace />
-          {/* <Video/> */}
-
-          {/* TODO - OTHER COMPONENT FOR INFO */}
+          <Video />
           <ProductDropdowns />
-
           {/* <Reviews/> */}
           <BundleAdCollections />
           <Products />

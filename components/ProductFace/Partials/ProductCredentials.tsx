@@ -11,7 +11,7 @@ const ProductCredentials: React.FC<IProductCredentials> = ({
   //TODO DYNAMIC DATA FROM API CALL TO PRODUCT ENDPOINT WITH PRODUCT ID/NAME
   return (
     <div className="w-full flex justify-center items-start flex-col text-charleston-green">
-      <h1 className="uppercase font-bold font-pano text-2xl">{`${name?.replaceAll(
+      <h1 className="uppercase font-bold font-pano text-2xl mxlg:text-xl">{`${name?.replaceAll(
         '-',
         ' '
       )}`}</h1>

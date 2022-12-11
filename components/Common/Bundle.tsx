@@ -1,7 +1,7 @@
 import React from 'react';
 const Bundle: React.FC = (): JSX.Element => {
   return (
-    <div className="w-full min-h-[60vh] h-auto flex justify-around items-center bg-charleston-green px-[75px] py-10 flex-wrap">
+    <div className="w-full min-h-[60vh] h-auto flex justify-around items-center bg-charleston-green px-[75px] py-10 flex-wrap mxlg:gap-5">
       <div className="flex flex-col justify-center items-center gap-5">
         <img
           src="/static/svgs/box-icon.svg"

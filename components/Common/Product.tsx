@@ -30,7 +30,7 @@ const Product: React.FC<IProduct> = ({
       <div
         className={`${
           hovered ? 'opacity-100' : 'opacity-0'
-        } flex justify-start items-center ease duration-150 z-10 absolute top-5 left-5`}
+        } flex justify-start items-center ease duration-150 z-10 absolute top-5 left-5 mxlg:opacity-100 mxlg:left-10`}
       >
         <ReviewStars review={5} />
       </div>
