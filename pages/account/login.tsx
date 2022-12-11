@@ -27,7 +27,7 @@ const login: NextPage = () => {
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''
-        } flex flex-col items-center justify-start text-white min-h-screen bg-black`}
+        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[130px]`}
       >
         <LoginForm />
         <Bundle />
