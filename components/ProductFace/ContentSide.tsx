@@ -12,7 +12,7 @@ const ContentSide: React.FC = (): JSX.Element => {
   const name: string | any = router?.query['product-name'];
   const [imageChange, setImageChange] = useState(false);
   return (
-    <div className="flex flex-col justify-start items-start w-[50%] min-h-full relative pt-[150px]">
+    <div className="flex flex-col justify-start items-start w-[50%] min-h-full relative pt-[150px] mxlg:w-full mxlg:pt-10">
       <div className="h-full flex justify-start items-start flex-col gap-10 w-[90%] mx-auto">
         <ProductCredentials name={name} />
         <Fragnances />

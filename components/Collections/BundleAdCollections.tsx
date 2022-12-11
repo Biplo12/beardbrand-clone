@@ -7,27 +7,29 @@ const BundleAdCollections: React.FC = (): JSX.Element => {
           BUILD A CUSTOM KIT
         </h1>
       </div>
-      <div className="flex flex-col gap-6 w-full justify-center pl-[75px] mxlg:py-[50px] mxlg:px-[25px]">
-        <p>
-          There’s no one-size-fits-all grooming routine—that’s why we let you
-          build your own bundle of Beardbrand products.
-        </p>
-        <p>
-          As you add products to your cart, we’ll automatically apply special
-          bundle pricing. The more you bundle, the more you save.
-        </p>
-        <p>Here’s how it works:</p>
-        <ul className="pl-[10px]">
-          <li>• Bundle 3 products + get 1 more free*</li>
-          <li>• Bundle 5 products + get 2 more free*</li>
-          <li>• Bundle 7 products + get 3 more free*</li>
-        </ul>
-        <p>
-          <i>
-            *The free item(s) will always be the lowest-priced items in your
-            cart.
-          </i>
-        </p>
+      <div className="flex flex-col w-full justify-center">
+        <div className="pl-[75px] mxlg:py-[50px] mxlg:px-[25px] flex gap-6 flex-col">
+          <p>
+            There’s no one-size-fits-all grooming routine—that’s why we let you
+            build your own bundle of Beardbrand products.
+          </p>
+          <p>
+            As you add products to your cart, we’ll automatically apply special
+            bundle pricing. The more you bundle, the more you save.
+          </p>
+          <p>Here’s how it works:</p>
+          <ul className="pl-[10px]">
+            <li>• Bundle 3 products + get 1 more free*</li>
+            <li>• Bundle 5 products + get 2 more free*</li>
+            <li>• Bundle 7 products + get 3 more free*</li>
+          </ul>
+          <p>
+            <i>
+              *The free item(s) will always be the lowest-priced items in your
+              cart.
+            </i>
+          </p>
+        </div>
       </div>
     </div>
   );

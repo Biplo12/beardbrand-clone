@@ -13,6 +13,7 @@ import Head from 'next/head';
 import { useAppSelector } from '@store/store-hooks';
 import { selectUser } from '@state/user/userSlice';
 import DialogProvider from '@components/Dialogs/DialogProvider';
+import BreadCrumpsCollections from '@components/Collections/Partials/BreadCrumpsCollections';
 
 const collections: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -32,8 +33,9 @@ const collections: NextPage = () => {
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''
-        } flex flex-col items-center justify-start text-white min-h-screen bg-black`}
+        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[14.5vh]`}
       >
+        <BreadCrumpsCollections />
         <BundleAdCollections />
         <Grooming />
         <Tools />
