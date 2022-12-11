@@ -11,10 +11,10 @@ import { useAppSelector } from '@store/store-hooks';
 import { selectUser } from '@state/user/userSlice';
 import DialogProvider from '@components/Dialogs/DialogProvider';
 import ProductFace from '@components/ProductFace/ProductFace';
-import BreadCrumpsComponent from '@components/ProductFace/BreadCrumpsComponent';
 import ProductDropdowns from '@components/ProductFace/Partials/ProductDropdowns';
 import Bundle from '@components/Common/Bundle';
 import Video from '@components/ProductFace/Partials/Video';
+import BreadCrumpsProduct from '@components/ProductFace/BreadCrumpsProduct';
 const productPage: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useAppSelector(selectUser);
@@ -33,7 +33,7 @@ const productPage: NextPage = () => {
         <DialogProvider />
         <Header />
         <div className={`mt-[14vh] ${user.menu ? 'brightness-[25%]' : ''}`}>
-          <BreadCrumpsComponent />
+          <BreadCrumpsProduct />
           <ProductFace />
           <Video />
           <ProductDropdowns />
