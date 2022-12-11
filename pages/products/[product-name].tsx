@@ -15,6 +15,10 @@ import ProductDropdowns from '@components/ProductFace/Partials/ProductDropdowns'
 import Bundle from '@components/Common/Bundle';
 import Video from '@components/Common/Video';
 import BreadCrumpsProduct from '@components/ProductFace/BreadCrumpsProduct';
+
+const VIDEO_URL =
+  'https://player.vimeo.com/video/755175261?h=98153d0ba7&loop=1';
+
 const productPage: NextPage = () => {
   const user = useAppSelector(selectUser);
   return (
@@ -24,7 +28,7 @@ const productPage: NextPage = () => {
       <div className={`mt-[14vh] ${user.menu ? 'brightness-[25%]' : ''}`}>
         <BreadCrumpsProduct />
         <ProductFace />
-        <Video videoUrl="https://player.vimeo.com/video/755175261?h=98153d0ba7&loop=1" />
+        <Video videoUrl={VIDEO_URL} />
         <ProductDropdowns />
         {/* <Reviews/> */}
         <BundleAdCollections />

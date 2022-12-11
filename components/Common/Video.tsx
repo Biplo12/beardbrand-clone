@@ -7,7 +7,7 @@ interface IVideo {
 
 const Video: React.FC<IVideo> = ({ videoUrl }): JSX.Element => {
   return (
-    <div className="">
+    <div>
       <Vimeo
         video={videoUrl}
         width={'100vw'}
