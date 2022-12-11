@@ -17,5 +17,9 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "rules": {
+    // Other rules
+    "@next/next/no-img-element": "off"
+  },
   "plugins": ["@typescript-eslint"]
 }

@@ -17,7 +17,6 @@ const Product: React.FC<IProduct> = ({
   imageHovered,
   name,
   price,
-  review,
 }): JSX.Element => {
   const [hovered, setHovered] = useState(false);
   const dispatch = useAppDispatch();
@@ -27,7 +26,10 @@ const Product: React.FC<IProduct> = ({
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      <Link href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}>
+      <Link
+        href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}
+        className="w-full"
+      >
         <div
           className={`${
             hovered ? 'opacity-100' : 'opacity-0'
@@ -35,12 +37,7 @@ const Product: React.FC<IProduct> = ({
         >
           <ReviewStars review={5} />
         </div>
-      </Link>
-      <Link
-        href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}
-        className="w-full"
-      >
-        <div className="relative w-full bg-[#D4E8E6] flex justify-center items-center overflow-hidden">
+        <div className="w-full bg-[#D4E8E6] flex justify-center items-center overflow-hidden">
           <img
             src={!hovered ? image : imageHovered}
             alt="product"
@@ -53,13 +50,13 @@ const Product: React.FC<IProduct> = ({
       <div className="w-full px-10 flex justify-between items-center mxsm:px-5 gap-3 py-5">
         <Link href={`/products/${name?.replaceAll(' ', '-')?.toLowerCase()}`}>
           <div className="flex justify-center items-start flex-col">
-            <a
+            <p
               className={`${
                 hovered ? 'fancy-link-hovered' : ''
               } fancy-link font-bold ease duration-150`}
             >
               {name}
-            </a>
+            </p>
             <h4>${price}</h4>
           </div>
         </Link>

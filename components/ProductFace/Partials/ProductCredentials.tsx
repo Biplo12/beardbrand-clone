@@ -20,7 +20,7 @@ const ProductCredentials: React.FC<IProductCredentials> = ({
   return (
     <>
       <Head>
-        <title>{ProductTitle} | Beardbrand </title>
+        <title>{`${ProductTitle || 'Product page'} | Beardbrand `}</title>
       </Head>
       <div className="w-full flex justify-center items-start flex-col text-charleston-green">
         <h1 className="uppercase font-bold font-pano text-2xl mxlg:text-xl">{`${productName}`}</h1>

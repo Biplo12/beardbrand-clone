@@ -1,8 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import type { NextPage } from 'next';
 import Header from '@components/Header/Header';
 import BundleAdCollections from '@components/Collections/BundleAdCollections';
-import Head from 'next/head';
 import Products from '@components/Products/Products';
 import Newsletter from '@components/Common/Newsletter';
 import Footer from '@components/Common/Footer';
@@ -15,19 +15,13 @@ import ProductDropdowns from '@components/ProductFace/Partials/ProductDropdowns'
 import Bundle from '@components/Common/Bundle';
 import Video from '@components/ProductFace/Partials/Video';
 import BreadCrumpsProduct from '@components/ProductFace/BreadCrumpsProduct';
+import Head from 'next/head';
 const productPage: NextPage = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useAppSelector(selectUser);
-
   return (
     <>
       <Head>
-        <title>Product Name | Beardbrand </title>
-        <link
-          rel="shortcut icon"
-          href="/static/assets/icon.png"
-          type="image/x-icon"
-        />
+        <title>{'Product Page'} | Beardbrand </title>
       </Head>
       <div className="flex flex-col items-center justify-start text-white min-h-screen bg-black">
         <DialogProvider />
