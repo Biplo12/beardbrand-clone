@@ -13,8 +13,8 @@ const ButtonArrow: React.FC<IBUTTON> = ({ buttonColor, text }): JSX.Element => {
         className={`${
           buttonColor === 'white'
             ? 'text-black bg-white'
-            : 'text-white bg-black'
-        } px-8 py-4 font-bold flex gap-3 text-xsm ease duration-200 hover:pr-8 max-h-12`}
+            : 'text-white bg-charleston-green'
+        } px-8 py-4 font-bold flex text-xsm ease duration-200 hover:pr-8 max-h-12`}
         onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
       >
@@ -27,7 +27,7 @@ const ButtonArrow: React.FC<IBUTTON> = ({ buttonColor, text }): JSX.Element => {
           }`}
           alt="arrow icon"
           className={`w-0 opacity-0 ease duration-200 h-[16px] ${
-            hovered ? 'w-[28px] opacity-100' : ''
+            hovered ? 'w-[28px] opacity-100 ml-3' : ''
           }`}
         />
       </button>
