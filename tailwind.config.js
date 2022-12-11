@@ -43,6 +43,9 @@ module.exports = {
         // => @media (max-width: 1280px) { ... }
         mxxl: { max: '1280px' },
       },
+      backgroundPosition: {
+        'top-4': 'center top -20rem',
+      },
     },
   },
   plugins: [],
