@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Dropdown from '../../Common/Dropdown';
 const DropdownsSide: React.FC = (): JSX.Element => {
   const [dropdown, setDropdown] = useState(false);
-  const [index, setIndex] = useState<any>(null);
+  const [index, setIndex] = useState<number>(-1);
 
-  //TODO - CREATE COMPONENTS FOR EVERY DROPDOWN
   return (
     <div className="w-1/2 h-full flex justify-center items-center mxlg:w-[90%] mxsm:mx-auto">
       <ul className="w-[90%] mx-auto flex flex-col gap-5">
