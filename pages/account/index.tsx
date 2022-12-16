@@ -25,7 +25,7 @@ const accountPage: NextPage = () => {
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''
-        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[130px]`}
+        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[130px] mxxsm:mt-[170px]`}
       >
         <AccountPage />
         <div className="flex flex-col gap-3 w-full">
