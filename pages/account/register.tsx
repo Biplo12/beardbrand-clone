@@ -27,7 +27,7 @@ const register: NextPage = () => {
       <div
         className={`${
           user.menu ? 'brightness-[25%]' : ''
-        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[130px]`}
+        } flex flex-col items-center justify-start text-white min-h-screen bg-black mt-[130px] mxxsm:mt-[170px]`}
       >
         <RegisterForm />
         <Bundle />

@@ -49,7 +49,7 @@ const Navbar: React.FC = (): JSX.Element => {
       <div
         className={`${
           menu || search || cart ? 'brightness' : ''
-        } w-full bg-alabaster px-[60px] h-[100px] top-0 left-0 flex justify-between items-center gap-3 ease duration-200 z-30 flex-wrap mxsm:justify-center`}
+        } w-full bg-alabaster px-[60px] h-[100px] mxxsm:h-[140px] top-0 left-0 flex justify-between items-center gap-3 ease duration-200 z-30 flex-wrap mxsm:justify-center mxxsm:flex-col`}
       >
         <Link href="/">
           <img

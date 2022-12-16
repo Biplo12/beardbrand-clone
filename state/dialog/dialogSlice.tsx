@@ -5,7 +5,7 @@ import { TDialog } from '@interfaces/IDialogInterface';
 
 export type TDialogPayload = {
   currentDialog: TDialog;
-  currentDialogAdditionalData?: any;
+  currentDialogAdditionalData?: unknown;
 };
 
 const initialState: IDialogInterface = {
