@@ -12,7 +12,7 @@ const BreadCrumpsProduct: React.FC = (): JSX.Element => {
     })
     .join(' ');
   return (
-    <div className="w-full h-[50px] flex justify-start items-center bg-white px-[50px] border-b border-charleston-green border-opacity-10">
+    <div className="w-full h-[50px] flex justify-start items-center bg-white px-[50px] border-b border-charleston-green border-opacity-10 mxsm:text-center mxsm:justify-center">
       <Breadcrumbs aria-label="breadcrumb">
         <Link href="/">
           <p className="font-space-grotesk ease duration-150 hover:text-black">

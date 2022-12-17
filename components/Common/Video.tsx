@@ -8,12 +8,12 @@ interface IVideo {
 const Video: React.FC<IVideo> = ({ videoUrl }): JSX.Element => {
   return (
     <div>
-      <Vimeo
+      {/* <Vimeo
         video={videoUrl}
         width={'100vw'}
         height={'100vh'}
         responsive={true}
-      />
+      /> */}
     </div>
   );
 };

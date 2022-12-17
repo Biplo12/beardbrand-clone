@@ -15,7 +15,7 @@ const Article: React.FC<IArticle> = ({
 
   return (
     <div
-      className="flex text-black justify-center items-end border-b-[1px] border-l-[0.5px] border-charleston-green border-opacity-10 ease duration-[.3s] cursor-pointer hover:bg-[#F2F1F0]"
+      className="flex text-black justify-center items-end border-b-[1px] border-l-[0.5px] border-charleston-green border-opacity-10 ease duration-[.3s] cursor-pointer hover:bg-[#F2F1F0] mxlg:flex-col-reverse"
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >

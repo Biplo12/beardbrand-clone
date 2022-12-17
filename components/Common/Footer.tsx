@@ -2,9 +2,9 @@ import Link from 'next/link';
 import React from 'react';
 const Footer: React.FC = (): JSX.Element => {
   return (
-    <div className="flex w-full min-h-[50vh] h-auto text-dark-vanilla justify-between items-center p-10 flex-wrap gap-3 bg-black">
+    <div className="flex w-full min-h-[50vh] h-auto text-dark-vanilla justify-between items-center p-10 flex-wrap gap-3 bg-black mxsm:p-[10px]">
       <div className="max-w-[500px] gap-3 flex flex-col">
-        <h1 className="font-pano font-bold text-sm">
+        <h1 className="font-pano font-bold text-sm mxxsm:text-[4vw]">
           SHOPPERS WITH DISABILITIES
         </h1>
         <p>
@@ -16,7 +16,9 @@ const Footer: React.FC = (): JSX.Element => {
         </p>
       </div>
       <div className="py-5">
-        <h1 className="font-pano font-bold text-sm">ABOUT BEARDBRAND</h1>
+        <h1 className="font-pano font-bold text-sm mxxsm:text-[4vw]">
+          ABOUT BEARDBRAND
+        </h1>
         <ul className="flex flex-col items-left">
           <li className="ease duration-200 text-sm">
             <Link href="shop" className="fancy-link vanilla">
@@ -51,7 +53,9 @@ const Footer: React.FC = (): JSX.Element => {
         </ul>
       </div>
       <div className="py-5">
-        <h1 className="font-pano font-bold text-sm">COMMUNITY SUPPORT</h1>
+        <h1 className="font-pano font-bold text-sm mxxsm:text-[4vw]">
+          COMMUNITY SUPPORT
+        </h1>
         <ul className="flex flex-col items-left">
           <li className="ease duration-200 text-sm">
             <Link href="shop" className="fancy-link vanilla">
@@ -86,7 +90,9 @@ const Footer: React.FC = (): JSX.Element => {
         </ul>
       </div>
       <div className="py-5">
-        <h1 className="font-pano font-bold text-sm">TOP BLOG ARTICLES</h1>
+        <h1 className="font-pano font-bold text-sm mxxsm:text-[4vw]">
+          TOP BLOG ARTICLES
+        </h1>
         <ul className="flex flex-col items-left">
           <li className="ease duration-200 text-sm">
             <Link href="shop" className="fancy-link vanilla">

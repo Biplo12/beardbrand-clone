@@ -1,7 +1,7 @@
 import React from 'react';
 const BottomBar: React.FC = (): JSX.Element => {
   return (
-    <div className="min-h-[20vh] w-full bg-black text-alabaster px-10 py-10">
+    <div className="min-h-[20vh] w-full bg-black text-alabaster px-10 py-10 mxsm:p-[10px]">
       <div className="flex justify-between items-center flex-wrap gap-5">
         <div className="flex flex-col gap-3">
           <p>COUNTRY/REGION</p>

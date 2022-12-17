@@ -12,6 +12,12 @@ const Navbar: React.FC = (): JSX.Element => {
   const [search, setSearch] = useState(false);
   const [cart, setCart] = useState(false);
   const router = useRouter();
+
+  const handleCloseMenu = () => {
+    setMenu(false);
+    dispatch(setMenuStatus(false));
+  };
+
   const handleMenu = () => {
     setMenu(!menu);
     dispatch(setMenuStatus(!menu));
@@ -49,7 +55,7 @@ const Navbar: React.FC = (): JSX.Element => {
       <div
         className={`${
           menu || search || cart ? 'brightness' : ''
-        } w-full bg-alabaster px-[60px] h-[100px] mxxsm:h-[140px] top-0 left-0 flex justify-between items-center gap-3 ease duration-200 z-30 flex-wrap mxsm:justify-center mxxsm:flex-col`}
+        } w-full bg-alabaster px-[60px] h-[100px] mxxsm:h-[140px] top-0 left-0 flex justify-between items-center gap-3 ease duration-200 z-30 flex-wrap mxsm:justify-center mxxsm:flex-col mxsm:px-[20px]`}
       >
         <Link href="/">
           <img
@@ -103,7 +109,7 @@ const Navbar: React.FC = (): JSX.Element => {
       </div>
       <div className="w-full bg-black z-30 h-full">
         <div
-          className={`fixed ease duration-500 w-[60%] h-[100vh] text-black top-0 bg-alabaster ${
+          className={`fixed ease duration-500 w-[60%] min-w-[250px] h-[100vh] text-black top-0 bg-alabaster ${
             menu ? 'right-0 z-30' : 'right-[-1800px]'
           }`}
         >
@@ -116,17 +122,19 @@ const Navbar: React.FC = (): JSX.Element => {
               onClick={handleMenu}
             />
           </div>
-          <ul className="text-charleston-green flex gap-10 justify-center items-start flex-col px-[60px] pt-[50px]">
+          <ul className="text-charleston-green flex gap-10 justify-center items-start flex-col px-[30px] pt-[50px]">
             <div className="flex flex-col gap-3">
-              <li className="font-bold">
+              <li className="font-bold" onClick={() => handleCloseMenu()}>
                 <Link href="/collections">SHOP</Link>
               </li>
-              <li className="font-bold ">
+              <li className="font-bold" onClick={() => handleCloseMenu()}>
                 <Link href="shop">LEARN</Link>
               </li>
             </div>
             <li>
-              <Link href="shop">Login</Link>
+              <Link href="/account/login" onClick={() => handleCloseMenu()}>
+                Login
+              </Link>
             </li>
           </ul>
           <div className="flex flex-col absolute bottom-0 p-[40px] gap-5">

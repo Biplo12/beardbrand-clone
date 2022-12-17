@@ -20,7 +20,9 @@ const Header: React.FC = (): JSX.Element => {
   return (
     <div
       className={`w-full z-20 ease duration-[.4s] fixed border-b-[1px] border-charleston-green border-opacity-10 ${
-        scrollDirection === 'down' && navbar ? '-top-36' : 'top-0'
+        scrollDirection === 'down' && navbar
+          ? '-top-36 mxsm:-top-[11rem]'
+          : 'top-0'
       }`}
     >
       <TopBar />

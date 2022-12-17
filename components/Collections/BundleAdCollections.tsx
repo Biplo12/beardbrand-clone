@@ -3,7 +3,7 @@ const BundleAdCollections: React.FC = (): JSX.Element => {
   return (
     <div className="w-full bg-plateu flex justify-center items-center px-[25px] h-auto mxlg:w-full text-charleston-green min-h-[80vh] mxlg:flex-col mxlg:px-0">
       <div className="flex justify-center items-center w-full min-h-[80vh] border-r-[1px] border-charleston-green border-opacity-10 mxlg:min-h-[30vh] mxlg:border-b-[1px] mxlg:border-r-[0px]">
-        <h1 className="font-pano text-2xl text-center mb-6 mxlg:text-xl mxlg:px-[25px] max-w-[500px]">
+        <h1 className="font-pano text-2xl text-center mb-6 mxlg:px-[25px] max-w-[500px] mxsm:text-[5vw]">
           BUILD A CUSTOM KIT
         </h1>
       </div>

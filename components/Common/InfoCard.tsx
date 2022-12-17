@@ -1,9 +1,9 @@
 import React from 'react';
 const InfoCard: React.FC = (): JSX.Element => {
   return (
-    <div className="w-full bg-dark-vanilla text-charleston-green flex justify-center items-center flex-col py-[50px] px-[75px] min-h-[70vh] h-auto">
-      <div className="flex flex-col justify-start ">
-        <h1 className="text-3xl font-pano mxsm:text-2xl mb-6">
+    <div className="w-full bg-dark-vanilla text-charleston-green flex justify-center items-center flex-col py-[50px] px-[75px] min-h-[70vh] h-auto mxsm:px-[10px]">
+      <div className="flex flex-col justify-start mxsm:justify-center mxsm:text-center">
+        <h1 className="text-3xl font-pano mb-6 mxsm:text-[10vw]">
           KEEP ON GROWING
         </h1>
         <div className="flex flex-col gap-6">
