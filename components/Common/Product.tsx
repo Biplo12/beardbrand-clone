@@ -68,6 +68,7 @@ const Product: React.FC<IProduct> = ({
               openDialog({
                 currentDialog: 'ADD_TO_CART',
                 currentDialogAdditionalData: {
+                  id: Math.floor(Math.random() * 100),
                   name,
                   price,
                   image,

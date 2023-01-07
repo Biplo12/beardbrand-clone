@@ -4,5 +4,8 @@ export default interface IUserReducerInterface {
     success: boolean;
     error: boolean;
   };
+  cart: {
+    products: any[];
+  };
   menu: boolean;
 }

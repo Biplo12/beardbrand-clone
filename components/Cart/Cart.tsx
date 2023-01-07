@@ -1,6 +1,7 @@
 import { selectUser } from '@state/user/userSlice';
 import { useAppSelector } from '@store/store-hooks';
-import React from 'react';
+import React, { useEffect } from 'react';
+import CartItems from './Partials/CartItems';
 interface ISeatch {
   cart?: boolean;
   handleCart?: any;
@@ -8,6 +9,9 @@ interface ISeatch {
 
 const Cart: React.FC<ISeatch> = ({ cart, handleCart }): JSX.Element => {
   const user = useAppSelector(selectUser);
+  useEffect(() => {
+    Object.keys(user?.cart?.products).length > 0 ? handleCart() : null;
+  }, [user?.cart?.products]);
   return (
     <>
       <button
@@ -43,16 +47,20 @@ const Cart: React.FC<ISeatch> = ({ cart, handleCart }): JSX.Element => {
               onClick={handleCart}
             />
           </div>
-          <div className="w-full border-b-[1px] border-charleston-green border-opacity-5 py-8 flex flex-col gap-10 px-[25px]">
-            <p>➤ You&apos;re $75 away from free USA shipping</p>
-            <div className="w-full flex  justify-center items-center">
-              <button className="bg-charleston-green text-white h-full px-5 font-bold text-xsm mxxsm:w-full py-4 w-[95%] mx-auto">
-                <p className="ease duration-150 hover:scale-105">
-                  START SHIPPING
-                </p>
-              </button>
+          {Object.keys(user?.cart?.products).length === 0 ? (
+            <div className="w-full border-b-[1px] border-charleston-green border-opacity-5 py-8 flex flex-col gap-10 px-[25px]">
+              <p>➤ You&apos;re $75 away from free USA shipping</p>
+              <div className="w-full flex  justify-center items-center">
+                <button className="bg-charleston-green text-white h-full px-5 font-bold text-xsm mxxsm:w-full py-4 w-[95%] mx-auto">
+                  <p className="ease duration-150 hover:scale-105">
+                    START SHIPPING
+                  </p>
+                </button>
+              </div>
             </div>
-          </div>
+          ) : (
+            <CartItems />
+          )}
           <div className="flex flex-col absolute bottom-0 p-[40px] gap-5">
             <p className="text-xsm">© 2022 Beardbrand</p>
           </div>

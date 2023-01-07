@@ -8,6 +8,9 @@ const initialState: IUserReducerInterface = {
     success: false,
     error: false,
   },
+  cart: {
+    products: [],
+  },
   menu: false,
 };
 
@@ -22,11 +25,14 @@ export const userSlice = createSlice({
     setMenuStatus(state, action: PayloadAction<any>) {
       state.menu = action.payload;
     },
+    setCartProducts(state, action: PayloadAction<any>) {
+      state.cart.products = action.payload;
+    },
   },
 });
 
 export const selectUser = (state: RootState) => state.user;
 
-export const { setStatus, setMenuStatus } = userSlice.actions;
+export const { setStatus, setMenuStatus, setCartProducts } = userSlice.actions;
 
 export default userSlice.reducer;

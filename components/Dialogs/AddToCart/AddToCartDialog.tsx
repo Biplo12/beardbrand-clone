@@ -2,6 +2,7 @@ import AddToCartButton from '@components/Common/AddToCartButton';
 import DispencerInput from '@components/Common/DispencerInput';
 import { Dialog, Transition } from '@headlessui/react';
 import { closeDialog, selectDialog } from '@state/dialog/dialogSlice';
+import { selectUser, setCartProducts } from '@state/user/userSlice';
 import { useAppDispatch, useAppSelector } from '@store/store-hooks';
 import React, { useState } from 'react';
 import DialogCloseButton from '../Partials/DialogCloseButton';
@@ -11,6 +12,27 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const dialog = useAppSelector(selectDialog);
   const props = dialog?.currentDialogAdditionalData;
+  const user = useAppSelector(selectUser);
+
+  const addToCartHandler = () => {
+    dispatch(
+      setCartProducts({
+        ...user?.cart?.products,
+        [props?.id]: {
+          id: props?.id,
+          name: props?.name,
+          price: props?.price,
+          image: props?.image,
+          imageWithoutDispenser: props?.imageWithoutDispenser,
+          quantity: user?.cart?.products?.[props?.id]
+            ? user?.cart?.products?.[props?.id]?.quantity + 1
+            : 1,
+          fragnance: 'Lavender',
+          dispenser: true,
+        },
+      })
+    );
+  };
 
   return (
     <>
@@ -83,7 +105,7 @@ const AddToCartDialog: React.FC = (): JSX.Element => {
                       imageChange={imageChange}
                     />
                     <div className="flex gap-3 flex-col w-full mxmd:flex-row">
-                      <AddToCartButton />
+                      <AddToCartButton addToCartHandler={addToCartHandler} />
                       <button className="border-[2px] text-sm border-charleston-green py-3 px-10 min-w-auto">
                         <p className="hover:scale-105 ease duration-150 w-full">
                           VISIT PRODUCT PAGE
